@@ -1,0 +1,492 @@
+<template>
+
+  <body>
+    <!-- Cuerpo del documento -->
+    <section id="home">
+
+
+      <!-- Contenedor principal -->
+      <div>
+        <!-- Barra de navegación principal -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container">
+            <!-- Logo o marca del sitio -->
+            <a class="navbar-brand" href="#">
+              <!-- Ícono de FontAwesome para representar la marca -->
+              <font-awesome-icon :icon="['fas', 'dumbbell']" /> TIME FIT
+            </a>
+
+            <!-- Botón colapsable para pantallas pequeñas -->
+            <button class="navbar-toggler" type="button" @click="toggleMenu" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- Menú de navegación -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <!-- Elemento de navegación: Home -->
+                <li class="nav-item">
+                  <router-link to="/" class="nav-link" @click="closeMenu">
+                    <!-- Ícono de FontAwesome para el enlace -->
+                    <font-awesome-icon :icon="['fas', 'house']" /> Home
+                  </router-link>
+                </li>
+                <!-- Elemento de navegación: About Us -->
+                <li class="nav-item">
+                  <router-link to="/AboutUS" class="nav-link" @click="closeMenu">
+                    <font-awesome-icon :icon="['fas', 'circle-info']" /> About us
+                  </router-link>
+                </li>
+                <!-- Elemento de navegación: Contact -->
+                <li class="nav-item">
+                  <router-link to="/Contact" class="nav-link" @click="closeMenu">
+                    <font-awesome-icon :icon="['fas', 'envelope']" /> Contact
+                  </router-link>
+                </li>
+                <!-- Elemento de navegación: Pricing -->
+                <li class="nav-item">
+                  <router-link to="/Pricing" class="nav-link" @click="closeMenu">
+                    <font-awesome-icon :icon="['fas', 'tag']" /> Plans and Pricing
+                  </router-link>
+                </li>
+                <!-- Elemento de navegación: Features -->
+                <li class="nav-item">
+                  <router-link to="/Features" class="nav-link" @click="closeMenu">
+                    <i class="bi bi-grid-1x2"></i> Features
+                  </router-link>
+                </li>
+                <!-- Elemento de navegación: Sign In -->
+                <li class="nav-item">
+                  <router-link to="/SignIn" class="nav-link" @click="closeMenu">
+                    <font-awesome-icon :icon="['fas', 'user-plus']" /> Sign up
+                  </router-link>
+                </li>
+                <!-- Elemento de navegación: Login -->
+                <li class="nav-item">
+                  <router-link to="/Login" class="nav-link" @click="closeMenu">
+                    <font-awesome-icon :icon="['fas', 'right-to-bracket']" /> Login
+                  </router-link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Vista del enrutador donde se renderizan las rutas -->
+      <router-view></router-view>
+
+      <!-- Pie de página -->
+      <footer class="footer mt-auto">
+        <!-- Contenedor principal del pie de página -->
+        <div class="container">
+
+          <!-- Sección del pie de página: Acerca de nosotros -->
+          <div class="row">
+            <div class="col-md-4 mb-md-0">
+              <!-- Columna del pie de página que ocupa 4 columnas en pantallas medianas -->
+              <h5>About us</h5>
+              <p>At Time Fit, we believe in the power of technology to transform gym management and enhance the user
+                experience. Our mission is to simplify daily gym operations by providing an intuitive platform that
+                combines management, personalization, and community in one place. </p>
+            </div>
+            <!-- Sección del pie de página: Enlaces rápidos -->
+            <div class="col-md-4 mb-md-0">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled footer-links">
+                <li>
+                  <router-link to="/" @click="scrollToSection('home')">Home</router-link>
+                </li>
+                <li>
+                  <router-link to="/AboutUS" @click="scrollToSection('aboutus')">About Us</router-link>
+                </li>
+                <li>
+                  <router-link to="/Contact" @click="scrollToSection('contact')">Contact</router-link>
+                </li>
+                <li>
+                  <router-link to="/Pricing" @click="scrollToSection('pricing')">Plans and Pricing</router-link>
+                </li>
+                <li>
+                  <router-link to="/Features" @click="scrollToSection('features')">Features</router-link>
+                </li>
+                <li>
+                  <router-link to="/SignIn" @click="scrollToSection('signin')">Sign up</router-link>
+                </li>
+                <li>
+                  <router-link to="/Login" @click="scrollToSection('login')">Log in</router-link>
+                </li>
+              </ul>
+
+            </div>
+
+
+            <!-- Sección del pie de página: Redes sociales -->
+            <div class="col-md-4">
+              <h5>Follow us</h5>
+              <div class="social-icons">
+                <!-- Íconos de redes sociales -->
+                <a href="#" class="social-icon" target="_blank">
+                  <font-awesome-icon :icon="['fab', 'facebook']" />
+                </a>
+                <a href="#" class="social-icon" target="_blank">
+                  <font-awesome-icon :icon="['fab', 'twitter']" />
+                </a>
+                <a href="#" class="social-icon" target="_blank">
+                  <font-awesome-icon :icon="['fab', 'instagram']" />
+                </a>
+                <a href="#" class="social-icon" target="_blank">
+                  <font-awesome-icon :icon="['fab', 'linkedin-in']" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección de derechos de autor -->
+        <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <p>&copy; <span id="year"></span> Developed by Time Fit. TI31BIS DSM. All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</template>
+
+<script>
+// Exportación del componente Vue
+export default {
+  name: 'App', // Nombre del componente principal
+  methods: {
+    // Método para alternar el menú desplegable
+    toggleMenu() {
+      const menu = document.getElementById("navbarNav"); // Obtiene el menú desplegable
+      if (menu.classList.contains("show")) {
+        menu.classList.remove("show"); // Cierra el menú eliminando la clase "show"
+      } else {
+        menu.classList.add("show"); // Abre el menú añadiendo la clase "show"
+      }
+    },
+    // Método para cerrar el menú al hacer clic en un enlace
+    closeMenu() {
+      const menu = document.getElementById("navbarNav");
+      if (menu.classList.contains("show")) {
+        menu.classList.remove("show");
+      }
+    },
+    // Método para desplazarse suavemente a una sección
+    scrollToSection(sectionId) {
+      this.$nextTick(() => {
+        const element = document.getElementById(sectionId); // Busca el ID después de que la vista esté cargada
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    },
+  },
+};
+</script>
+
+
+<style scoped>
+/* Importación del archivo CSS de Bootstrap para utilizar sus estilos predeterminados */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
+
+/* Importación de la fuente "Poppins" desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Estilo global para el cuerpo del documento */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* Define la fuente general para el cuerpo */
+  background-color: #272829;
+  /* Establece un color de fondo oscuro */
+}
+
+/* Cambia la fuente del pie de página */
+body footer {
+  font-family: 'Poppins', 'sans-serif';
+  /* Define la fuente "Poppins" para el footer */
+}
+
+/* Estilo para la barra de navegación */
+.navbar {
+  background-color: #983E00;
+  /* Color de fondo de la barra */
+  padding: 12px 0;
+  /* Relleno interno vertical */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Sombra alrededor de la barra */
+  transition: all 0.3s ease;
+  /* Transición suave para cambios en la barra */
+}
+
+/* Estilo para el logo de la barra de navegación */
+.navbar-brand {
+  font-weight: bold;
+  /* Texto en negrita */
+  color: #fff !important;
+  /* Color del texto */
+  font-size: 18px;
+  /* Tamaño de fuente */
+  text-transform: uppercase;
+  /* Texto en mayúsculas */
+  letter-spacing: 1px;
+  /* Espaciado entre letras */
+}
+
+/* Estilo para los enlaces de navegación */
+.nav-link {
+  color: #ecf0f1 !important;
+  /* Color del texto */
+  font-weight: 500;
+  /* Peso del texto */
+  text-transform: uppercase;
+  /* Texto en mayúsculas */
+  padding: 10px 15px !important;
+  /* Espaciado interno */
+  margin: 0 5px;
+  /* Margen horizontal */
+  position: relative;
+  /* Posicionamiento relativo */
+  transition: color 0.3s ease;
+  /* Transición suave para cambios de color */
+  font-size: 12px;
+  /* Tamaño de fuente */
+}
+
+/* Estilo de los íconos dentro de los enlaces */
+.nav-link i {
+  margin-right: 8px;
+  /* Espaciado derecho */
+  font-size: 1em;
+  /* Tamaño del ícono */
+}
+
+/* Estilo cuando se pasa el cursor sobre los enlaces de navegación */
+.nav-link:hover {
+  color: #B1D690 !important;
+  /* Cambia el color del texto al pasar el cursor */
+}
+
+/* Efecto visual debajo del enlace cuando se pasa el cursor */
+.nav-link::after {
+  content: "";
+  /* Elemento vacío como línea decorativa */
+  position: absolute;
+  /* Posicionamiento absoluto */
+  bottom: -3px;
+  /* Colocado debajo del texto */
+  left: 50%;
+  /* Centrando inicialmente */
+  width: 0;
+  /* Oculto inicialmente */
+  height: 4px;
+  /* Grosor de la línea */
+  background-color: #B1D690;
+  /* Color de la línea */
+  transition: all 0.3s ease;
+  /* Transición suave */
+  transform: translateX(-50%);
+  /* Centrando la línea */
+}
+
+/* Expande la línea al pasar el cursor */
+.nav-link:hover::after {
+  width: 100%;
+  /* Ancho completo */
+  left: 0;
+  /* Ajusta la posición a la izquierda */
+  transform: translateX(0);
+  /* Restablece la posición */
+}
+
+/* Estilo para el botón de colapso en pantallas pequeñas */
+.navbar-toggler {
+  border-color: #fff;
+  /* Color del borde */
+}
+
+/* Ícono personalizado para el botón de colapso */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 991px) {
+  .navbar-nav {
+    background-color: #272829;
+    /* Fondo degradado */
+    padding: 20px;
+    /* Relleno interno */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    margin-top: 10px;
+    /* Margen superior */
+  }
+
+  .nav-link:hover {
+  color: #F8820B !important;
+  /* Cambia el color del texto al pasar el cursor */
+}
+
+
+  .nav-link {
+    text-align: center;
+    /* Centra el texto */
+    justify-content: center;
+    /* Centra el contenido */
+    margin: 5px 0;
+    /* Margen vertical */
+  }
+
+  .nav-link::after {
+    display: none;
+    /* Oculta la línea decorativa */
+  }
+
+  .footer {
+    text-align: center;
+    /* Centra el texto del pie de página */
+  }
+
+  .social-icons {
+    margin-top: 20px;
+    /* Margen superior para los íconos sociales */
+  }
+}
+
+/* Estilo para el pie de página */
+footer {
+  background: #983E00;
+  /* Color de fondo */
+  color: white;
+  /* Color del texto */
+  padding: 50px 0 20px;
+  /* Espaciado interno */
+  position: relative;
+  /* Posicionamiento relativo */
+  overflow: hidden;
+  /* Oculta contenido desbordante */
+}
+
+/* Encabezados dentro del pie de página */
+.footer h5 {
+  color: #fff;
+  /* Color del texto */
+  font-weight: 600;
+  /* Peso del texto */
+  margin-bottom: 20px;
+  /* Margen inferior */
+  position: relative;
+  /* Posicionamiento relativo */
+  display: inline-block;
+  /* Comportamiento en línea */
+}
+
+/* Línea decorativa debajo de los encabezados del footer */
+.footer h5::after {
+  content: '';
+  /* Línea decorativa */
+  position: absolute;
+  /* Posicionamiento absoluto */
+  left: 0;
+  /* Alineado a la izquierda */
+  bottom: -5px;
+  /* Colocado debajo del texto */
+  width: 50px;
+  /* Ancho inicial */
+  height: 2px;
+  /* Altura */
+  background-color: #B1D690;
+  /* Color de la línea */
+  transition: width 0.3s ease;
+  /* Transición suave */
+}
+
+/* Ancho completo de la línea al pasar el cursor */
+.footer h5:hover::after {
+  width: 100%;
+  /* Ancho completo */
+}
+
+/* Estilo para párrafos y listas en el footer */
+.footer p,
+.footer ul {
+  color: #fff;
+  /* Color del texto */
+  font-weight: 300;
+  /* Peso del texto */
+}
+
+/* Estilo de los íconos sociales */
+.social-icon {
+  font-size: 1.8rem;
+  /* Tamaño del ícono */
+  margin-right: 20px;
+  /* Margen derecho */
+  color: white;
+  /* Color inicial */
+  transition: all 0.3s ease;
+  /* Transición suave */
+}
+
+/* Cambia el color y posición de los íconos sociales al pasar el cursor */
+.social-icon:hover {
+  color: #B1D690;
+  /* Cambia el color */
+  transform: translateY(-5px);
+  /* Mueve el ícono hacia arriba */
+}
+
+/* Estilo para los enlaces en el footer */
+.footer a {
+  color: white;
+  /* Color del texto */
+  text-decoration: none;
+  /* Elimina el subrayado */
+  transition: color 0.3s ease;
+  /* Transición de color */
+}
+
+/* Cambia el color de los enlaces al pasar el cursor */
+footer a:hover {
+  color: #B1D690;
+}
+
+/* Estilo para elementos de lista en el footer */
+.footer-links li {
+  margin-bottom: 10px;
+  /* Margen inferior */
+  transition: transform 0.3s ease;
+  /* Transición suave */
+}
+
+/* Desplaza los elementos de la lista al pasar el cursor */
+.footer-links li:hover {
+  transform: translateX(5px);
+  /* Movimiento hacia la derecha */
+}
+
+/* Estilo para el año dinámico */
+#year {
+  font-weight: bold;
+  /* Negrita */
+  color: B1D690;
+  /* Color */
+}
+
+/* Sección de copyright */
+.copyright {
+  /* Fondo degradado */
+  padding: 15px 0;
+  /* Espaciado interno */
+  margin-top: 30px;
+  /* Margen superior */
+}
+</style>
