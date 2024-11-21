@@ -11,12 +11,12 @@
                 <!-- Primera columna: Formulario de registro -->
                 <div class="col-12 col-md-6">
                     <!-- Título del formulario -->
-                    <h1 class="text-left mb-4">Sign up</h1>
+                    <h1 class="text-left mb-4">Sign Up</h1>
                     <!-- Mensaje para redirigir a la página de inicio de sesión si ya tiene cuenta -->
                     <div>
                         <p class="question"> Already have an account?
                             <!-- Enlace para navegar a la página de inicio de sesión -->
-                            <router-link to="/Login" @click="scrollToSection('login')">Log in</router-link>
+                            <router-link to="/Login" @click="scrollToSection('login')">Log In here</router-link>
                         </p>
                     </div>
                     <!-- Inicio del formulario -->
@@ -43,7 +43,7 @@
                         <div class="mb-3">
                             <label for="email" class="form-label">Email Address</label>
                             <input type="email" class="input-field" v-model="email"
-                                placeholder="Write your first name here" required>
+                                placeholder="Write your email address here" required>
                         </div>
                         <!-- Campo: Contraseña -->
                         <div class="mb-3">
@@ -74,21 +74,21 @@
                         <!-- Botones de acción -->
                         <div class="button-group">
                             <!-- Botón para enviar el formulario -->
-                            <button type="submit" class="submit-btn">Sign up</button>
+                            <button type="submit" class="submit-btn">Sign Up</button>
                             <!-- Separador con texto -->
                             <div class="divider">
                                 <hr class="line">
-                                <span>Or sign up with</span>
+                                <span>Or sign Up with</span>
                                 <hr class="line">
                             </div>
                             <!-- Botón para iniciar sesión con Google -->
                             <button @click="signInWithGoogle" type="button" class="google-btn">
-                                <font-awesome-icon :icon="['fab', 'google']" class="social-icon" />Sign In With Google
+                                <font-awesome-icon :icon="['fab', 'google']" class="social-icon" />Sign Up With Google
                             </button>
                             <!-- Botón para iniciar sesión con Microsoft -->
                             <button @click="signInWithGoogle" type="button" class="google-btn">
-                                <font-awesome-icon :icon="['fab', 'microsoft']" class="social-icon" />Sign In With
-                                Microsoft
+                                <font-awesome-icon :icon="['fab', 'apple']" class="social-icon" />Sign Up With
+                                Apple
                             </button>
                         </div>
                     </form>
@@ -96,7 +96,7 @@
                 <!-- Segunda columna: Imagen -->
                 <div class="col-12 col-md-6">
                     <!-- Imagen ilustrativa para la página de registro -->
-                    <img :src="require('@/assets/Sujeto Sign UP.png')" alt="hola" width="100%" height="auto">
+                    <img :src="require('@/assets/Sujeto Sign UP.png')" alt="signin person" width="100%" height="auto">
                 </div>
             </div>
         </div>
@@ -369,6 +369,7 @@ h1 {
 .question {
     color: #F8820B; /* Color naranja */
     font-size: 18px; /* Tamaño del texto */
+    font-weight: bold;
 }
 
 /* Etiquetas del formulario */

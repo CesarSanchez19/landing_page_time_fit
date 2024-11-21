@@ -66,8 +66,11 @@
                 <!-- Elemento de navegación: Login -->
                 <li class="nav-item">
                   <router-link to="/Login" class="nav-link" @click="closeMenu">
-                    <font-awesome-icon :icon="['fas', 'right-to-bracket']" /> Login
+                    <font-awesome-icon :icon="['fas', 'right-to-bracket']" /> Log in
                   </router-link>
+                </li>
+                <li>
+                  <button @click="handleSignOut" v-if="isLoggedIn"> Sign out</button>
                 </li>
               </ul>
             </div>
@@ -158,37 +161,61 @@
   </body>
 </template>
 
-<script>
-// Exportación del componente Vue
-export default {
-  name: 'App', // Nombre del componente principal
-  methods: {
-    // Método para alternar el menú desplegable
-    toggleMenu() {
-      const menu = document.getElementById("navbarNav"); // Obtiene el menú desplegable
-      if (menu.classList.contains("show")) {
-        menu.classList.remove("show"); // Cierra el menú eliminando la clase "show"
-      } else {
-        menu.classList.add("show"); // Abre el menú añadiendo la clase "show"
-      }
-    },
-    // Método para cerrar el menú al hacer clic en un enlace
-    closeMenu() {
-      const menu = document.getElementById("navbarNav");
-      if (menu.classList.contains("show")) {
-        menu.classList.remove("show");
-      }
-    },
-    // Método para desplazarse suavemente a una sección
-    scrollToSection(sectionId) {
-      this.$nextTick(() => {
-        const element = document.getElementById(sectionId); // Busca el ID después de que la vista esté cargada
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    },
-  },
+<script setup>
+import { onMounted, ref, nextTick } from "vue";
+import { useRouter } from "vue-router";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+
+const router = useRouter();
+const isLoggedIn = ref(false);
+
+let auth;
+
+// Lógica de autenticación y verificación del usuario
+onMounted(() => {
+  auth = getAuth();
+  onAuthStateChanged(auth, (user) => {
+    isLoggedIn.value = !!user; // Verifica si hay un usuario autenticado
+  });
+});
+
+// Manejo del cierre de sesión
+const handleSignOut = () => {
+  signOut(auth)
+    .then(() => {
+      router.push("/"); // Redirige a la página principal tras cerrar sesión
+    })
+    .catch((error) => {
+      console.error("Error al cerrar sesión:", error);
+    });
+};
+
+// Método para alternar el menú desplegable
+const toggleMenu = () => {
+  const menu = document.getElementById("navbarNav");
+  if (menu.classList.contains("show")) {
+    menu.classList.remove("show");
+  } else {
+    menu.classList.add("show");
+  }
+};
+
+// Método para cerrar el menú al hacer clic en un enlace
+const closeMenu = () => {
+  const menu = document.getElementById("navbarNav");
+  if (menu.classList.contains("show")) {
+    menu.classList.remove("show");
+  }
+};
+
+// Método para desplazarse suavemente a una sección específica
+const scrollToSection = (sectionId) => {
+  nextTick(() => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  });
 };
 </script>
 
