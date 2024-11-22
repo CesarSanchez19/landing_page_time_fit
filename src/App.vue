@@ -70,7 +70,7 @@
                   </router-link>
                 </li>
                 <li>
-                  <button @click="handleSignOut" v-if="isLoggedIn"> Sign out</button>
+                  <button @click="handleSignOut" v-if="isLoggedIn" class="sign-out"> Sign out</button>
                 </li>
               </ul>
             </div>
@@ -241,6 +241,29 @@ body footer {
   /* Define la fuente "Poppins" para el footer */
 }
 
+.sign-out {
+  background: #F8820B;
+  /* Fondo naranja */
+  color: black;
+
+  border-color: #F8820B;
+  /* Texto negro */
+  font-size: 16px;
+  /* Tamaño del texto */
+  font-weight: bold;
+  /* Texto en negrita */
+}
+
+/* Hover en el botón de registro */
+.sign-out:hover {
+  background: linear-gradient(#FF4300, #FF6400);
+  /* Degradado de naranja */
+  border-color: #FF6400;
+  /* Sin borde visible */
+  color: rgb(255, 255, 255);
+  /* Texto blanco */
+}
+
 /* Estilo para la barra de navegación */
 .navbar {
   background-color: #983E00;
@@ -354,13 +377,20 @@ body footer {
     border-radius: 10px;
     /* Bordes redondeados */
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    /* Acomoda los elementos en columna */
+    align-items: center;
+    /* Centra horizontalmente */
+    justify-content: center;
+
     /* Margen superior */
   }
 
   .nav-link:hover {
-  color: #F8820B !important;
-  /* Cambia el color del texto al pasar el cursor */
-}
+    color: #F8820B !important;
+    /* Cambia el color del texto al pasar el cursor */
+  }
 
 
   .nav-link {
@@ -385,6 +415,11 @@ body footer {
   .social-icons {
     margin-top: 20px;
     /* Margen superior para los íconos sociales */
+  }
+
+  .sign-out {
+    text-align: center;
+    margin-top: 15px;
   }
 }
 

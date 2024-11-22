@@ -87,8 +87,8 @@
                             </button>
                             <!-- Botón para iniciar sesión con Microsoft -->
                             <button @click="signInWithGoogle" type="button" class="google-btn">
-                                <font-awesome-icon :icon="['fab', 'apple']" class="social-icon" />Sign Up With
-                                Apple
+                                <font-awesome-icon :icon="['fab', 'microsoft']" class="social-icon" />Sign Up With
+                                Microsoft
                             </button>
                         </div>
                     </form>

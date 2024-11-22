@@ -65,7 +65,7 @@
                             </button>
                             <!-- Botón para iniciar sesión con Microsoft -->
                             <button @click="signInWithGoogle" type="button" class="google-btn">
-                                <font-awesome-icon :icon="['fab', 'apple']" class="social-icon" />Log In With Apple
+                                <font-awesome-icon :icon="['fab', 'microsoft']" class="social-icon" />Log In With Microsoft
                             </button>
                         </div>
                     </form>
@@ -108,7 +108,8 @@ const register = () => {
     // Intenta iniciar sesión con email y contraseña
     signInWithEmailAndPassword(auth, email.value, password.value)
         .then(() => {
-            console.log("Successfully signed in!"); // Log de éxito
+            alert(`Successfully Log in!`);
+            console.log("Successfully Log in!"); // Log de éxito
             router.push("/"); // Redirige al usuario a la página "Feed"
         })
         .catch((error) => {
@@ -375,5 +376,10 @@ h1 {
     /* Color naranja */
     padding-top: 15px;
     /* Margen superior */
+}
+
+p {
+    color: #EB4343; /* Rojo */
+    font-weight: bold; /* Negrita */
 }
 </style>
