@@ -33,6 +33,14 @@ Consulta la [referencia de configuración](https://cli.vuejs.org/config/) para m
 4. **Iconos modernos**: Utiliza Font Awesome para incorporar íconos atractivos y accesibles.
 5. **Estilización avanzada**: Usa Google Fonts, propiedades CSS como `box-shadow`, `transition`, y media queries para un diseño moderno y dinámico.
 
+## Integrantes del equipo
+
+1. Aarón
+2. Cesar
+3. Yair
+4. Enrique
+5. Diego
+
 ## Referencias de apoyo
 
 1. Vue.js. (n.d.). *Guide*. Vue.js. Retrieved November 16, 2024, from [https://vuejs.org/guide/introduction.html](https://vuejs.org/guide/introduction.html)
