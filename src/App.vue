@@ -229,7 +229,7 @@ const scrollToSection = (sectionId) => {
 
 /* Estilo global para el cuerpo del documento */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins',Arial, Helvetica, sans-serif; /* Por defecto, es Poppins, y si no, continua con el resto */
   /* Define la fuente general para el cuerpo */
   background-color: #272829;
   /* Establece un color de fondo oscuro */
