@@ -679,7 +679,7 @@
         color: #F8820B;
     }
 
-    /* Main: Section - Transform your gym experience with innovative  --> */
+    /* Main: Section - Transform your gym experience with innovative */
 
     .backgrd-final-content-main {
         margin-bottom: 4em;
@@ -913,10 +913,9 @@
         /* Styles for cards title */
 
         .title-cards > h1 {
-            text-align: left;
+            text-align: center;
             font-size: 1.8rem;
-            margin-left: 2.8em;
-            padding: 3.5em 0em 0.8em 0em;
+            padding: 3.5em 0em 2em 0em;
         }
 
         /* Styles for section promotional video */
