@@ -46,42 +46,42 @@
                         <div class="text-imagen">Squats</div>
                     </div>
                     <div class="imagen-rec">
-                        <img class="imagenes-rec" :src="require('@/assets/squat.png')" alt="squat">
-                        <div class="text-imagen">Squats</div>
+                        <img class="imagenes-rec" :src="require('@/assets/push.jpg')" alt="push up">
+                        <div class="text-imagen">Push-Ups</div>
                     </div>
                     <div class="imagen-rec">
-                        <img class="imagenes-rec" :src="require('@/assets/squat.png')" alt="squat">
-                        <div class="text-imagen">Squats</div>
+                        <img class="imagenes-rec" :src="require('@/assets/pull_up.png')" alt="pull up">
+                        <div class="text-imagen">Pull-Ups</div>
                     </div>
                     <div class="imagen-rec">
-                        <img class="imagenes-rec" :src="require('@/assets/squat.png')" alt="squat">
-                        <div class="text-imagen">Squats</div>
+                        <img class="imagenes-rec" :src="require('@/assets/burpees.png')" alt="burpees">
+                        <div class="text-imagen">Burpees</div>
                     </div>
                     <div class="imagen-rec">
-                        <img class="imagenes-rec" :src="require('@/assets/squat.png')" alt="squat">
-                        <div class="text-imagen">Squats</div>
+                        <img class="imagenes-rec" :src="require('@/assets/plank.png')" alt="plank">
+                        <div class="text-imagen">Plank</div>
                     </div>
                 </div>
                 <div class="image-container">
                     <div class="imagen-rec">
-                        <img class="imagenes-rec" :src="require('@/assets/squat.png')" alt="squat">
-                        <div class="text-imagen">Squats</div>
+                        <img class="imagenes-rec" :src="require('@/assets/lunges.png')" alt="lunges">
+                        <div class="text-imagen">Lunges</div>
                     </div>
                     <div class="imagen-rec">
-                        <img class="imagenes-rec" :src="require('@/assets/squat.png')" alt="squat">
-                        <div class="text-imagen">Squats</div>
+                        <img class="imagenes-rec" :src="require('@/assets/deadlift.png')" alt="deadlift">
+                        <div class="text-imagen">Deadlift</div>
                     </div>
                     <div class="imagen-rec">
-                        <img class="imagenes-rec" :src="require('@/assets/squat.png')" alt="squat">
-                        <div class="text-imagen">Squats</div>
+                        <img class="imagenes-rec" :src="require('@/assets/bicep.png')" alt="bicep curl">
+                        <div class="text-imagen">Bicep Curls</div>
                     </div>
                     <div class="imagen-rec">
-                        <img class="imagenes-rec" :src="require('@/assets/squat.png')" alt="squat">
-                        <div class="text-imagen">Squats</div>
+                        <img class="imagenes-rec" :src="require('@/assets/barbell.png')" alt="barbell bicep curl">
+                        <div class="text-imagen">Barbell Bicep Curl</div>
                     </div>
                     <div class="imagen-rec">
-                        <img class="imagenes-rec" :src="require('@/assets/squat.png')" alt="squat">
-                        <div class="text-imagen">Squats</div>
+                        <img class="imagenes-rec" :src="require('@/assets/leg.png')" alt="leg raise">
+                        <div class="text-imagen">Leg Raise</div>
                     </div>
                 </div>
             </div>
@@ -89,6 +89,9 @@
         </div>
 
         <div class="textrec">At Time Fit, we offer a variety of essential and effective exercises to help you achieve your fitness goals, regardless of your experience level. From basic movements like squats and push-ups to advanced exercises like deadlifts and pull-ups, our program is designed to build strength, endurance, and muscle tone.</div>
+        <div class="button2">
+            Join Now
+        </div>
 
     </section>
 </template>
@@ -283,6 +286,23 @@
     line-height: 33px; 
     word-wrap: break-word;
     margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+.button2 {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #FF4300 0%, #FF6400 100%);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: Outfit, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 800px ;
     margin-bottom: 20px;
 }
 </style>
