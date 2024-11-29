@@ -11,14 +11,7 @@ const router = createRouter({
         { path: "/SignIn", component: () => import("../components/signin.vue") },
         { path: "/Login", component: () => import("../components/login.vue") },
         { path: "/Condiction", component: () => import("../components/condiction.vue") },
-        {
-            // Ruta protegida para el Plans and Pricing, accesible solo para usuarios autenticados.
-            path: "/Pricing",
-            component: () => import("../components/Pricing.vue"),
-            meta: {
-                requiresAuth: true, // Meta atributo que indica que la ruta requiere autenticación.
-            },
-        },
+        { path: "/Pricing", component: () => import("../components/Pricing.vue") },
     ]
 });
 // Función que obtiene al usuario autenticado actual.
