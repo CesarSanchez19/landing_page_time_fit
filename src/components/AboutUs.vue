@@ -209,20 +209,70 @@
 
 
 <style scoped>
+
+    /* Sizing reset */
+
     * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
     }
 
-    h1, h2 {
-        color: white;
+    /* ----- Main: Hero section ----- */
+
+    .hero-contnt-main {
+        width: 100%;
+        min-height: 30em;
+        contain: content;
+        overflow: hidden;
+        position: relative;
     }
 
-    p {
-        color: cadetblue;
+    /* Styles resposive background */
+    .hero-img-backgrd {
+        width: 100%;
+        /* height: 50em; */
+        height: 100%;
+        object-fit: cover;
+        object-position: 63% 10%;
+        position: absolute;
+        filter: brightness(55%);
     }
+
+    /* Styles text for hero content */
+    .hero-txt-contnt {
+        display: block;
+        top: 5em;
+        height: auto;
+        width: 50em;
+        max-width: 90%;
+        margin: auto;
+        position: relative;
+        z-index: 1; /* El texto esta por encima del background*/
+        text-align: center;
+        color: #fff;
+    }
+
+    /* Styles for main title of hero*/
+    .hero-contnt-main h1 {
+        font-weight: 600;
+        font-size: 2.4em;
+        letter-spacing: 2px;
+        padding-bottom: 1em;
+    }
+
+    /* For screen smaller */
+    @media(width <= 628px) {
+        .hero-contnt-main h1 {
+        font-weight: 600;
+        font-size: 1.6em;
+        letter-spacing: 1px;
+        padding-bottom: 1em;
+        }
+    }
+
+    /* ----- Main: Info text and imgs about us ----- */
+
+
 
 </style>
-
-<!-- TERMINAR ESTE COMPONENTE -->
