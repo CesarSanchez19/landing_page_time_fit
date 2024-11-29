@@ -195,6 +195,55 @@
         </ul>
       </div>
     </div>
+
+    <div class="title4">Find the Perfect Plan for Your Gym</div>
+    <div class="textplan">Choose the plan that best suits your gym’s needs and start transforming your users' experience with Time Fit.</div>
+
+    <!--planes-->
+    <div class="plans-container">
+  <div class="plan basic-plan">
+    <h2>Basic Plan</h2>
+    <p>Small gyms or individuals who need quick access to essential features.</p>
+    <p class="price">$400.00 MXN / Month</p>
+    <button>Get Started Now</button>
+    <div class="details">
+      <h3>For Users:</h3>
+      <ul>
+        <li>Access to a library of over 20,000 PNG and SVG graphics.</li>
+        <li>Basic workout tracking and progress monitoring.</li>
+        <li>Limited access to training plans and resources.</li>
+      </ul>
+      <h3>For Administrators:</h3>
+      <ul>
+        <li>Basic membership management tools.</li>
+        <li>Access to customer data and limited analytics.</li>
+      </ul>
+      <h3>Limitations:</h3>
+      <ul>
+        <li>No team collaboration features.</li>
+        <li>No integration with advanced fitness devices or analytics.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="plan professional-plan">
+    <h2>Professional Plan</h2>
+    <p>Medium-sized gyms that need advanced features and more flexibility.</p>
+    <p class="price">$600.00 MXN / Month</p>
+    <button>Get Started Now</button>
+    <!-- Similar details structure as Basic Plan -->
+  </div>
+
+  <div class="plan master-plan">
+    <h2>Master Plan</h2>
+    <p>Large gyms or fitness chains that need comprehensive tools.</p>
+    <p class="price">$800.00 MXN / Month</p>
+    <button>Get Started Now</button>
+    <!-- Similar details structure as Basic Plan -->
+  </div>
+</div>
+
+
   </section>
 </template>
 
@@ -416,6 +465,7 @@
   align-items: flex-start;
   gap: 20px; /* Espacio entre las secciones */
   padding: 20px;
+  margin-bottom: 40px;
 }
 
 .recipe-image {
@@ -429,6 +479,7 @@
   width: 100%;
   max-width: 400px;
   border-radius: 8px;
+  margin-left: 100px;
 }
 
 .recipe-description {
@@ -443,14 +494,17 @@
   font-size: 36px;
   font-family: Outfit, sans-serif;
   font-weight: 700;
+  margin-left: 100px;
 }
 
 .foodtext {
   color: white;
+  width: 60%;
   font-size: 18px;
   font-family: Outfit, sans-serif;
   word-wrap: break-word;
-  margin-left: 20px;
+  margin-left: 60px;
+  margin-bottom: 20px;
 }
 
 .button3 {
@@ -466,8 +520,8 @@
   font-family: Outfit, sans-serif;
   font-weight: 600;
   cursor: pointer;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 60px;
+  margin-right: 180px;
   margin-bottom: 20px;
 }
 
@@ -487,7 +541,7 @@
   font-family: Inter; 
   font-weight: 700; 
   word-wrap: break-word;
-  margin-left: 20px;
+  margin-left: 0px;
   margin-bottom: 20px;
 }
 
@@ -496,6 +550,115 @@
   height: auto;
   margin-right: 25px;
   border-radius: 10%;
+}
+
+.title4 {
+  width: 100%; 
+  text-align: center; 
+  color: #FF4300; 
+  font-size: 48px; 
+  font-family: Inter; 
+  font-weight: 700; 
+  line-height: 57.60px; 
+  word-wrap: break-word;
+  margin-bottom: 20px;
+}
+
+.textplan {
+  color: white;
+  font-size: 22px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 26.40px;
+  word-wrap: break-word;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/*planes */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+}
+
+.plan {
+  width: 300px;
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.plan h2 {
+  font-size: 24px;
+  color: #ff6400;
+}
+
+.plan p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.plan .price {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.plan button {
+  background-color: #ff4300;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.plan button:hover {
+  background-color: #ff6400;
+}
+
+.details h3 {
+  text-align: left;
+  font-size: 18px;
+  color: #ff6400;
+  margin-top: 15px;
+}
+
+.details ul {
+  text-align: left;
+  margin: 10px 0 0 20px;
+}
+
+.details ul li {
+  margin: 5px 0;
+}
+
+.basic-plan {
+  background-color: #333;
+}
+
+.professional-plan {
+  background-color: #ff6400;
+}
+
+.master-plan {
+  background-color: #4c4c4c;
 }
 
 </style>
