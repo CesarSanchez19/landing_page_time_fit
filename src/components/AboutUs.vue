@@ -84,80 +84,80 @@
     </section>
 
     <!-- ! Main: Team members - Cards -->
-    <!-- <header class="title-cards">
+    <header class="title-cards-content">
         <h1>Team Members</h1>
     </header>
 
     <section class="team-membs-contnt-main">
         <div class="team-membs-contnt">
             
-            Target 1
+            <!--? Target 1 -->
             <article>
                 
                 <figure>
                     <img src="../assets/img-aboutUs/Diego-foto-card.jpg" alt="Diego Balbuena picture">
                 </figure>
-                <div class="txt-team-membs-contnt">
-                    <p>Balbuena Caballero Diego</p>
-                    <p>UX/UI Designer</p>
+                <div class="txt-team-membs-contnt txt-team-membs-diego">
+                    <p class="txt-team-membs-name">Balbuena Caballero Diego</p>
+                    <p class="txt-team-membs-rol">UX/UI Designer</p>
                 </div>
                 
             </article>
             
-            Target 2
+            <!--? Target 2 -->
             <article>
 
                 <figure>
                     <img src="../assets/img-aboutUs/Enrique-foto-card.jpg" alt="Enrique Castillo picture">
                 </figure>
-                <div class="txt-team-membs-contnt">
-                    <p>Castillo Rodríguez Enrique</p>
-                    <p>CEO project</p>
+                <div class="txt-team-membs-contnt txt-team-membs-enrique">
+                    <p class="txt-team-membs-name">Castillo Rodríguez Enrique</p>
+                    <p class="txt-team-membs-rol">CEO project</p>
                 </div>
 
             </article>
 
-            Target 3
+            <!--? Target 3 -->
             <article>
 
                 <figure>
                     <img src="../assets/img-aboutUs/Yair-foto-card.jpg" alt="Yair Gamaliel picture">
                 </figure>
-                <div class="txt-team-membs-contnt">
-                    <p>Guzmán Pérez Yair Gamaliel</p>
-                    <p>Full Stack Developer</p>
+                <div class="txt-team-membs-contnt txt-team-membs-yair">
+                    <p class="txt-team-membs-name">Guzmán Pérez Yair Gamaliel</p>
+                    <p class="txt-team-membs-rol">Full Stack Developer</p>
                 </div>
 
             </article>
 
-            Target 4
+            <!--? Target 4 -->
             <article>
 
                 <figure>
                     <img src="../assets/img-aboutUs/Cesar-foto-card.jpg" alt="Cesar Sanchez picture">
                 </figure>
-                <div class="txt-team-membs-contnt">
-                    <p>Sánchez Trejo Cesar David</p>
-                    <p>Network Architect</p>
+                <div class="txt-team-membs-contnt txt-team-membs-cesar">
+                    <p class="txt-team-membs-name">Sánchez Trejo Cesar David</p>
+                    <p class="txt-team-membs-rol">Network Architect</p>
                 </div>
 
             </article>
 
-            Target 5
+            <!--? Target 5 -->
             <article>
 
                 <figure>
                     <img src="../assets/img-aboutUs/Aaron-foto-card.jpg" alt="Aarón Santos picture">
                 </figure>
-                <div class="txt-team-membs-contnt">
-                    <p>Santos Absalón Aarón de Jesús</p>
-                    <p>UX/UI Designer</p>
+                <div class="txt-team-membs-contnt txt-team-membs-aaron">
+                    <p class="txt-team-membs-name">Santos Absalón Aarón de Jesús</p>
+                    <p class="txt-team-membs-rol">UX/UI Designer</p>
                 </div>
 
             </article>
 
         </div>
-    </section> -->
+    </section>
 
      <!-- ! Main: Asked questions - Accordion -->
     <!-- <section class="ask-accor-contnt-main">
@@ -440,5 +440,126 @@
 
     /* ----- Main: Team members section ----- */
 
+    /* Styles for title */
+
+    .title-cards-content {
+        display: flex;
+        justify-items: center;
+    }
+
+    .title-cards-content h1 {
+        text-align: center;
+        justify-content: center;
+        font-size: 2.2rem;
+        color: #ff6400;
+        margin: 0 auto;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+    /* Styles for team members main container */
+    .team-membs-contnt-main {
+         display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        color: white;
+        min-height: 30em;
+    }
+
+    .team-membs-contnt {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 3em;
+    }
+
+    /* Styles for every card */
+
+    .team-membs-contnt article {
+        width: 12em;
+        height: 350px;
+        display: block;
+        transition: all 0.4s ease-in-out;
+        overflow: hidden;
+        border-radius: 16px;
+    }
+
+    
+    /* Styles of conteiner text and text */
+    
+    .team-membs-contnt article p {
+        margin: 0 0 18px 0;
+        font-size: 14px;
+        color:  #fff;
+        text-align: center;
+        transition: color 0.3s ease-out;
+    }
+    
+    .txt-team-membs-contnt {
+        margin-top: 1em;
+        padding: 0 1em;
+        
+    }
+
+    .team-membs-contnt .txt-team-membs-rol {
+        color: #F8820B;
+    }
+
+    .team-membs-contnt .txt-team-membs-name {
+        font-weight: 600;
+    }
+
+    .txt-team-membs-yair {
+        font-size: 10px;
+        margin: 1.2em;
+    }
+
+    /* Styles for conteiner and image */
+
+    .team-membs-contnt article img {
+        max-width: 100%;
+        transform-origin: center;
+        max-height: 370px;
+        border: solid #ff6400;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+
+
+    /* Styles extras but not functional */
+
+    /* .team-membs-content figure {
+        width: 100%;
+        height: 24px;
+        overflow: hidden;
+    } */
+
+    /* .team-membs-content figure img {
+        height: 100%;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        object-fit: cover;
+    } */
+
+    /* For screen smaller */
+
+    @media(width <= 1151px) {
+        .title-cards-content {
+            margin-bottom: 2em;
+        }
+
+        .title-cards-content h1 {
+            font-size: 1.8rem;
+        }
+
+        .team-membs-contnt-main {
+            margin-bottom: 3em;
+        }
+    }
+
+    /* ----- Main: Frequently asked question section ----- */
 
 </style>
