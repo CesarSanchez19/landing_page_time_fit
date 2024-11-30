@@ -298,7 +298,7 @@
     /* Styles for resposive contain of div's containers */
     .info-txt-img-contnt {
         display: flex;
-        color: wheat;
+        color: #fff;
         height: 100%;
         padding: 1em;
         justify-content: center;
