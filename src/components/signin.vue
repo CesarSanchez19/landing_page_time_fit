@@ -85,11 +85,6 @@
                             <button @click="signInWithGoogle" type="button" class="google-btn">
                                 <font-awesome-icon :icon="['fab', 'google']" class="social-icon" />Sign Up With Google
                             </button>
-                            <!-- Botón para iniciar sesión con Microsoft -->
-                            <button @click="signInWithGoogle" type="button" class="google-btn">
-                                <font-awesome-icon :icon="['fab', 'microsoft']" class="social-icon" />Sign Up With
-                                Microsoft
-                            </button>
                         </div>
                     </form>
                 </div>
@@ -104,7 +99,7 @@
 </template>
 <script setup>
 import { ref, nextTick } from "vue"; // Importa `ref` para crear variables reactivas y `nextTick` para ejecutar código después de actualizar el DOM
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"; // Importa funciones de autenticación de Firebase
+import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider} from "firebase/auth"; // Importa funciones de autenticación de Firebase
 import { useRouter } from "vue-router"; // Importa el router para redirecciones en Vue.js
 
 // Variables reactivas para los campos del formulario
@@ -199,184 +194,280 @@ const register = () => {
             }
         });
 };
+// Método para autenticación con Google
+const signInWithGoogle = () => {
+    const provider = new GoogleAuthProvider();
+    const auth = getAuth();
+
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            const user = result.user; // Información del usuario autenticado
+            alert(`Welcome, ${user.displayName}!`);
+            router.push("/"); // Redirección tras inicio de sesión
+        })
+        .catch((error) => {
+            console.error("Error with Google sign-in:", error);
+            alert("An error occurred during Google sign-in. Please try again.");
+        });
+};
 </script>
 
 <style scoped>
 /* Oculta la imagen en pantallas pequeñas */
 @media screen and (max-width: 768px) {
     .col-md-6 img {
-        display: none; /* La imagen no se muestra en pantallas pequeñas */
+        display: none;
+        /* La imagen no se muestra en pantallas pequeñas */
     }
 }
 
 /* Estilo para el ícono de Google en el botón al pasar el cursor */
 .google-btn:hover .social-icon {
-    color: #fff; /* Cambia el color del ícono a blanco */
+    color: #fff;
+    /* Cambia el color del ícono a blanco */
 }
 
 /* Estilo para los íconos sociales */
 .social-icon {
-    font-size: 1.5rem; /* Tamaño del ícono */
-    margin-right: 20px; /* Espaciado a la derecha del ícono */
-    color: #F8820B; /* Color inicial del ícono */
-    transition: all 0.3s ease; /* Transición suave para los cambios de estilo */
+    font-size: 1.5rem;
+    /* Tamaño del ícono */
+    margin-right: 20px;
+    /* Espaciado a la derecha del ícono */
+    color: #F8820B;
+    /* Color inicial del ícono */
+    transition: all 0.3s ease;
+    /* Transición suave para los cambios de estilo */
 }
 
 /* Estilo del separador entre texto y líneas */
 .divider {
-    display: flex; /* Flexbox para alinear elementos */
-    align-items: center; /* Centra verticalmente los elementos */
-    gap: 10px; /* Espacio entre líneas y el texto */
+    display: flex;
+    /* Flexbox para alinear elementos */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    gap: 10px;
+    /* Espacio entre líneas y el texto */
 }
 
 /* Estilo para las líneas horizontales del separador */
 .line {
-    flex-grow: 1; /* Expande la línea para ocupar el espacio disponible */
-    border: none; /* Elimina bordes predeterminados */
-    height: 4px; /* Grosor de la línea */
-    background-color: #F8820B; /* Color naranja de la línea */
-    color: #F8820B; /* Color adicional, aunque no afecta <hr> directamente */
+    flex-grow: 1;
+    /* Expande la línea para ocupar el espacio disponible */
+    border: none;
+    /* Elimina bordes predeterminados */
+    height: 4px;
+    /* Grosor de la línea */
+    background-color: #F8820B;
+    /* Color naranja de la línea */
+    color: #F8820B;
+    /* Color adicional, aunque no afecta <hr> directamente */
 }
 
 /* Estilo para el texto del separador */
 span {
-    color: #F8820B; /* Color naranja */
-    font-size: 16px; /* Tamaño del texto */
+    color: #F8820B;
+    /* Color naranja */
+    font-size: 16px;
+    /* Tamaño del texto */
 }
 
 /* Estilo para una línea personalizada */
 .linea {
-    background: #F8820B; /* Fondo naranja */
+    background: #F8820B;
+    /* Fondo naranja */
 }
 
 /* Grupo de botones */
 .button-group {
-    display: flex; /* Flexbox para organizar botones */
-    flex-direction: column; /* Botones apilados verticalmente */
-    gap: 1rem; /* Espaciado entre botones */
-    margin-top: 1.5rem; /* Margen superior */
-    padding-bottom: 50px; /* Espaciado inferior */
+    display: flex;
+    /* Flexbox para organizar botones */
+    flex-direction: column;
+    /* Botones apilados verticalmente */
+    gap: 1rem;
+    /* Espaciado entre botones */
+    margin-top: 1.5rem;
+    /* Margen superior */
+    padding-bottom: 50px;
+    /* Espaciado inferior */
 }
 
 /* Botón de envío y botones sociales */
 .submit-btn,
 .google-btn {
-    width: 100%; /* Botones ocupan todo el ancho */
-    padding: 0.75rem; /* Relleno interno */
-    border: none; /* Sin borde */
-    border-radius: 4px; /* Bordes redondeados */
-    font-size: 1rem; /* Tamaño del texto */
-    cursor: pointer; /* Cambia el cursor a pointer */
-    transition: background-color 0.3s ease; /* Transición suave en el fondo */
-    align-items: center; /* Centra el contenido */
+    width: 100%;
+    /* Botones ocupan todo el ancho */
+    padding: 0.75rem;
+    /* Relleno interno */
+    border: none;
+    /* Sin borde */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    font-size: 1rem;
+    /* Tamaño del texto */
+    cursor: pointer;
+    /* Cambia el cursor a pointer */
+    transition: background-color 0.3s ease;
+    /* Transición suave en el fondo */
+    align-items: center;
+    /* Centra el contenido */
 }
 
 /* Estilo del botón de registro */
 .submit-btn {
-    background: #F8820B; /* Fondo naranja */
-    color: rgb(5, 5, 5); /* Texto negro */
-    font-size: 16px; /* Tamaño del texto */
-    font-weight: bold; /* Texto en negrita */
+    background: #F8820B;
+    /* Fondo naranja */
+    color: rgb(5, 5, 5);
+    /* Texto negro */
+    font-size: 16px;
+    /* Tamaño del texto */
+    font-weight: bold;
+    /* Texto en negrita */
 }
 
 /* Hover en el botón de registro */
 .submit-btn:hover {
-    background: linear-gradient(#FF4300, #FF6400); /* Degradado de naranja */
-    border-color: linear-gradient(#FF4300, #FF6400); /* Sin borde visible */
-    color: rgb(255, 255, 255); /* Texto blanco */
+    background: linear-gradient(#FF4300, #FF6400);
+    /* Degradado de naranja */
+    border-color: linear-gradient(#FF4300, #FF6400);
+    /* Sin borde visible */
+    color: rgb(255, 255, 255);
+    /* Texto blanco */
 }
 
 /* Botón de Google */
 .google-btn {
-    background-color: transparent; /* Fondo transparente */
-    color: #F8820B; /* Texto naranja */
-    border: 2px solid #F8820B; /* Borde naranja */
-    font-weight: bold; /* Texto en negrita */
+    background-color: transparent;
+    /* Fondo transparente */
+    color: #F8820B;
+    /* Texto naranja */
+    border: 2px solid #F8820B;
+    /* Borde naranja */
+    font-weight: bold;
+    /* Texto en negrita */
 }
 
 /* Hover en el botón de Google */
 .google-btn:hover {
-    border: none; /* Elimina el borde */
-    background: linear-gradient(#FF4300, #FF6400); /* Degradado de fondo */
-    color: rgb(255, 255, 255); /* Texto blanco */
-    border: 2px solid #FF4300; /* Borde naranja fuerte */
+    border: none;
+    /* Elimina el borde */
+    background: linear-gradient(#FF4300, #FF6400);
+    /* Degradado de fondo */
+    color: rgb(255, 255, 255);
+    /* Texto blanco */
+    border: 2px solid #FF4300;
+    /* Borde naranja fuerte */
 }
 
 /* Contenedor para términos y condiciones */
 .term-container {
-    display: flex; /* Flexbox para alinear el checkbox y el texto */
-    align-items: center; /* Centra verticalmente */
-    gap: 10px; /* Espaciado entre checkbox y texto */
-    margin-top: 10px; /* Margen superior */
-    padding-bottom: 20px; /* Espaciado inferior */
+    display: flex;
+    /* Flexbox para alinear el checkbox y el texto */
+    align-items: center;
+    /* Centra verticalmente */
+    gap: 10px;
+    /* Espaciado entre checkbox y texto */
+    margin-top: 10px;
+    /* Margen superior */
+    padding-bottom: 20px;
+    /* Espaciado inferior */
 }
 
 /* Estilo del texto de términos y condiciones */
 .term {
-    font-size: 16px; /* Tamaño del texto */
-    color: #F8820B; /* Color naranja */
+    font-size: 16px;
+    /* Tamaño del texto */
+    color: #F8820B;
+    /* Color naranja */
 }
 
 /* Estilo para el checkbox */
 input[type="checkbox"] {
-    accent-color: #FF4300; /* Color del checkbox cuando está seleccionado */
-    width: 20px; /* Ancho del checkbox */
-    height: 20px; /* Altura del checkbox */
-    cursor: pointer; /* Cambia el cursor a pointer */
+    accent-color: #FF4300;
+    /* Color del checkbox cuando está seleccionado */
+    width: 20px;
+    /* Ancho del checkbox */
+    height: 20px;
+    /* Altura del checkbox */
+    cursor: pointer;
+    /* Cambia el cursor a pointer */
 }
 
 /* Texto para mensajes de éxito */
 .text-success {
-    color: #51C23A; /* Verde */
-    font-weight: bold; /* Negrita */
+    color: #51C23A;
+    /* Verde */
+    font-weight: bold;
+    /* Negrita */
 }
 
 /* Texto para mensajes de error */
 .text-danger {
-    color: #EB4343; /* Rojo */
-    font-weight: bold; /* Negrita */
+    color: #EB4343;
+    /* Rojo */
+    font-weight: bold;
+    /* Negrita */
 }
 
 /* Contenedor del formulario */
 .form-container {
-    background-color: 272829; /* Color de fondo oscuro */
-    padding: 30px; /* Relleno interno */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: 272829;
+    /* Color de fondo oscuro */
+    padding: 30px;
+    /* Relleno interno */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
 }
 
 /* Estilo del título */
 h1 {
-    color: #F8820B; /* Color naranja */
-    margin-bottom: 30px; /* Margen inferior */
-    font-weight: bold; /* Texto en negrita */
-    padding-bottom: 12px; /* Espaciado inferior */
-    font-size: 56px; /* Tamaño del texto */
+    color: #F8820B;
+    /* Color naranja */
+    margin-bottom: 30px;
+    /* Margen inferior */
+    font-weight: bold;
+    /* Texto en negrita */
+    padding-bottom: 12px;
+    /* Espaciado inferior */
+    font-size: 56px;
+    /* Tamaño del texto */
 }
 
 /* Campos de entrada del formulario */
 .input-field {
-    width: 100%; /* Ocupa todo el ancho */
-    height: 42px; /* Altura del campo */
-    padding: 0.75rem; /* Relleno interno */
-    border: 1px solid #ddd; /* Borde gris claro */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 1rem; /* Tamaño del texto */
-    transition: border-color 0.3s ease; /* Transición suave para el color del borde */
+    width: 100%;
+    /* Ocupa todo el ancho */
+    height: 42px;
+    /* Altura del campo */
+    padding: 0.75rem;
+    /* Relleno interno */
+    border: 1px solid #ddd;
+    /* Borde gris claro */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    font-size: 1rem;
+    /* Tamaño del texto */
+    transition: border-color 0.3s ease;
+    /* Transición suave para el color del borde */
 }
 
 /* Estilo del texto de preguntas */
 .question {
-    color: #F8820B; /* Color naranja */
-    font-size: 18px; /* Tamaño del texto */
+    color: #F8820B;
+    /* Color naranja */
+    font-size: 18px;
+    /* Tamaño del texto */
     font-weight: bold;
 }
 
 /* Etiquetas del formulario */
 .form-label {
-    font-weight: bold; /* Texto en negrita */
-    color: #F8820B; /* Color naranja */
-    padding-top: 15px; /* Margen superior */
+    font-weight: bold;
+    /* Texto en negrita */
+    color: #F8820B;
+    /* Color naranja */
+    padding-top: 15px;
+    /* Margen superior */
 }
 </style>
-

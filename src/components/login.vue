@@ -63,10 +63,6 @@
                             <button @click="signInWithGoogle" type="button" class="google-btn">
                                 <font-awesome-icon :icon="['fab', 'google']" class="social-icon" />Log In With Google
                             </button>
-                            <!-- Botón para iniciar sesión con Microsoft -->
-                            <button @click="signInWithGoogle" type="button" class="google-btn">
-                                <font-awesome-icon :icon="['fab', 'microsoft']" class="social-icon" />Log In With Microsoft
-                            </button>
                         </div>
                     </form>
                 </div>
@@ -78,7 +74,7 @@
 </template>
 <script setup>
 import { ref, nextTick } from "vue"; // Importa la función ref para manejar estados reactivos
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth"; // Importa Firebase Auth
+import { getAuth, signInWithEmailAndPassword,signInWithPopup, GoogleAuthProvider } from "firebase/auth"; // Importa Firebase Auth
 import { useRouter } from "vue-router"; // Importa el enrutador de Vue para redirección
 
 // Estado reactivo para almacenar el email ingresado
@@ -134,6 +130,26 @@ const register = () => {
             loading.value = false; // Desactiva el estado de carga
         });
 };
+
+const signInWithGoogle = async () => {
+    const auth = getAuth();
+    try {
+        const provider = new GoogleAuthProvider();
+        const result = await signInWithPopup(auth, provider);
+        const user = result.user;
+
+        console.log("Email from Google:", user.email);
+
+        // Redirige al usuario a la página de inicio después de iniciar sesión
+        alert("Successfully logged in with Google!");
+        router.push("/");
+    } catch (error) {
+        console.error("Error during Google log-in:", error);
+        errMsg.value = "An error occurred during log-in. Please try again.";
+    }
+};
+
+
 </script>
 
 <style scoped>
