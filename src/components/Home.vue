@@ -11,7 +11,7 @@
 
             <div class="text-bttn-hero">
                 <p class="txt-subtitl-top">Your Fitness Journey Starts Here</p>
-                <h1 class="txt-titl-welcomn">WELCOME TO TIME FIT PROJECT</h1>
+                <h1 class="txt-titl-welcomn">WELCOME TO TIME FIT</h1>
                 <p class="txt-parghp-bottom">Manage your gym efficiently and offer an unparalleled experience to your users.</p>
 
                 <!-- Button redirection to section cards video -->
