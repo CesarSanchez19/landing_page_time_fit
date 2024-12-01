@@ -151,7 +151,6 @@
     </div>
     <div class="button2">Join Now</div>
 
-
     <div class="title3">Famous and Nutritious Recipes for Every Taste</div>
     <div class="recipe-section">
       <!-- Imagen -->
@@ -197,53 +196,151 @@
     </div>
 
     <div class="title4">Find the Perfect Plan for Your Gym</div>
-    <div class="textplan">Choose the plan that best suits your gym’s needs and start transforming your users' experience with Time Fit.</div>
+    <div class="textplan">
+      Choose the plan that best suits your gym’s needs and start transforming
+      your users' experience with Time Fit.
+    </div>
 
     <!--planes-->
     <div class="plans-container">
-  <div class="plan basic-plan">
-    <h2>Basic Plan</h2>
-    <p>Small gyms or individuals who need quick access to essential features.</p>
-    <p class="price">$400.00 MXN / Month</p>
-    <button>Get Started Now</button>
-    <div class="details">
-      <h3>For Users:</h3>
-      <ul>
-        <li>Access to a library of over 20,000 PNG and SVG graphics.</li>
-        <li>Basic workout tracking and progress monitoring.</li>
-        <li>Limited access to training plans and resources.</li>
-      </ul>
-      <h3>For Administrators:</h3>
-      <ul>
-        <li>Basic membership management tools.</li>
-        <li>Access to customer data and limited analytics.</li>
-      </ul>
-      <h3>Limitations:</h3>
-      <ul>
-        <li>No team collaboration features.</li>
-        <li>No integration with advanced fitness devices or analytics.</li>
-      </ul>
+      <div class="plan basic-plan">
+        <h2>Basic Plan</h2>
+        <p>
+          Small gyms or individuals who need quick access to essential features.
+        </p>
+        <p class="price">$400.00 MXN / Month</p>
+        <button>Get Started Now</button>
+        <div class="details">
+          <h3>For Users:</h3>
+          <ul>
+            <li>
+              Access to a library of over 20,000 PNG and SVG graphics to
+              personalize workout plans.
+            </li>
+            <li>Basic workout tracking and progress monitoring.</li>
+            <li>Limited access to training plans and resources.</li>
+          </ul>
+          <h3>For Administrators:</h3>
+          <ul>
+            <li>Basic membership management tools.</li>
+            <li>Access to customer data and limited analytics.</li>
+            <li>No custom branding options.</li>
+            <li>Limited storage for member records and gym data.</li>
+          </ul>
+          <h3>Limitations:</h3>
+          <ul>
+            <li>Does not support unlimited sharing of resources.</li>
+            <li>No ability to create teams for collaborative work.</li>
+            <li>No integration with advanced fitness devices or analytics.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="plan professional-plan">
+        <h2>Professional Plan</h2>
+        <p>
+          Medium-sized gyms that need advanced features and more flexibility.
+        </p>
+        <p class="price">$600.00 MXN / Month</p>
+        <button>Get Started Now</button>
+        <div class="details">
+          <h3>For Users:</h3>
+          <ul>
+            <li>
+              Access to a vast library of 100 million stock images for creating
+              personalized workout and nutrition plans.
+            </li>
+            <li>
+              Customizable fitness plans with tracking capabilities for
+              individual goals.
+            </li>
+            <li>
+              Access to a community forum to engage with other gym members and
+              share achievements.
+            </li>
+            <li>
+              Upload and share progress pictures and videos in up to 4K quality.
+            </li>
+          </ul>
+          <h3>For Administrators:</h3>
+          <ul>
+            <li>
+              Advanced membership management tools, including billing and
+              attendance tracking.
+            </li>
+            <li>Custom branding options to align with the gym's image.</li>
+            <li>
+              Unlimited project management for developing new classes and member
+              programs.
+            </li>
+            <li>
+              Access to detailed analytics to track member progress and gym
+              performance.
+            </li>
+          </ul>
+          <h3>Limitations:</h3>
+          <ul>
+            <li>
+              Does not allow team creation for design and project collaboration.
+            </li>
+            <li>Limited integration with external CRM and marketing tools.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="plan master-plan">
+        <h2>Master Plan</h2>
+        <p>Large gyms or fitness chains that need comprehensive tools.</p>
+        <p class="price">$800.00 MXN / Month</p>
+        <button>Get Started Now</button>
+        <div class="details">
+          <h3>For Users:</h3>
+          <ul>
+            <li>
+              Full access to all exercise and nutrition resources, including
+              high-protein, low-carb, dairy-free, and vegetarian recipe
+              collections.
+            </li>
+            <li>
+              Advanced progress tracking with integration to fitness devices
+              (e.g., heart rate monitors).
+            </li>
+            <li>
+              Ability to connect and compare progress with other users in real
+              time.
+            </li>
+          </ul>
+          <h3>For Administrators:</h3>
+          <ul>
+            <li>
+              Complete membership and financial management suite with advanced
+              reporting tools.
+            </li>
+            <li>
+              Team collaboration features to work with trainers, nutritionists,
+              and marketing staff.
+            </li>
+            <li>Limited storage for member records and gym data.</li>
+            <li>
+              Data insights on user behavior and retention statistics to guide
+              business.
+            </li>
+          </ul>
+          <h3>Benefits:</h3>
+          <ul>
+            <li>Unlimited sharing of resources and multimedia content.</li>
+            <li>
+              Instant access to updates and new features without additional
+              fees.
+            </li>
+            <li>
+              Priority customer support with a dedicated account manager for
+              seamless operations.
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="plan professional-plan">
-    <h2>Professional Plan</h2>
-    <p>Medium-sized gyms that need advanced features and more flexibility.</p>
-    <p class="price">$600.00 MXN / Month</p>
-    <button>Get Started Now</button>
-    <!-- Similar details structure as Basic Plan -->
-  </div>
-
-  <div class="plan master-plan">
-    <h2>Master Plan</h2>
-    <p>Large gyms or fitness chains that need comprehensive tools.</p>
-    <p class="price">$800.00 MXN / Month</p>
-    <button>Get Started Now</button>
-    <!-- Similar details structure as Basic Plan -->
-  </div>
-</div>
-
-
   </section>
 </template>
 
@@ -490,7 +587,7 @@
 }
 
 .title3 {
-  color: #FF6400;
+  color: #ff6400;
   font-size: 36px;
   font-family: Outfit, sans-serif;
   font-weight: 700;
@@ -535,11 +632,11 @@
 }
 
 .recipe-categories li {
-  width: 100%; 
-  color: white; 
-  font-size: 24px; 
-  font-family: Inter; 
-  font-weight: 700; 
+  width: 100%;
+  color: white;
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 700;
   word-wrap: break-word;
   margin-left: 0px;
   margin-bottom: 20px;
@@ -553,13 +650,13 @@
 }
 
 .title4 {
-  width: 100%; 
-  text-align: center; 
-  color: #FF4300; 
-  font-size: 48px; 
-  font-family: Inter; 
-  font-weight: 700; 
-  line-height: 57.60px; 
+  width: 100%;
+  text-align: center;
+  color: #ff4300;
+  font-size: 48px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 57.6px;
   word-wrap: break-word;
   margin-bottom: 20px;
 }
@@ -569,27 +666,18 @@
   font-size: 22px;
   font-family: Inter;
   font-weight: 700;
-  line-height: 26.40px;
+  line-height: 26.4px;
   word-wrap: break-word;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 10px;
 }
 
 /*planes */
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #1f1f1f;
-  color: white;
-}
-
 .plans-container {
   display: flex;
   justify-content: space-around;
-  padding: 20px;
+  padding: 100px;
   gap: 20px;
 }
 
@@ -597,19 +685,24 @@ body {
   width: 300px;
   background-color: #2c2c2c;
   border-radius: 10px;
-  padding: 20px;
+  padding: 20px ;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
+.plan:hover{
+  background-color: #e9762a;
+}
+
 .plan h2 {
   font-size: 24px;
-  color: #ff6400;
+  color: white;
 }
 
 .plan p {
   font-size: 16px;
   margin: 10px 0;
+  color: white;
 }
 
 .plan .price {
@@ -619,30 +712,31 @@ body {
 }
 
 .plan button {
-  background-color: #ff4300;
+  background-color: #FA4F06;
   color: white;
   border: none;
-  padding: 10px 15px;
-  border-radius: 20px;
+  padding: 10px 57px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   margin: 10px 0;
 }
 
 .plan button:hover {
-  background-color: #ff6400;
+  background-color: #45474B;
 }
 
 .details h3 {
   text-align: left;
   font-size: 18px;
-  color: #ff6400;
+  color: white;
   margin-top: 15px;
 }
 
 .details ul {
   text-align: left;
   margin: 10px 0 0 20px;
+  color: white;
 }
 
 .details ul li {
@@ -650,15 +744,14 @@ body {
 }
 
 .basic-plan {
-  background-color: #333;
+  background-color: #45474b;
 }
 
 .professional-plan {
-  background-color: #ff6400;
+  background-color: #45474b;
 }
 
 .master-plan {
-  background-color: #4c4c4c;
+  background-color: #45474b;
 }
-
 </style>
