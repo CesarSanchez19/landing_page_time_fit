@@ -1,4 +1,7 @@
 <template>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- ! Main: Hero content -->
     <section class="hero-contnt-main">
         <img class="hero-img-backgrd" 
@@ -85,7 +88,7 @@
 
     <!-- ! Main: Team members - Cards -->
     <header class="title-cards-content">
-        <h1>Team Members</h1>
+        <h2>Team Members</h2>
     </header>
 
     <section class="team-membs-contnt-main">
@@ -160,62 +163,72 @@
     </section>
 
      <!-- ! Main: Asked questions - Accordion -->
-    <!-- <section class="ask-accor-contnt-main">
+    <section class="ask-accor-contnt-main">
         <h2>Frequently Asked Question</h2>
 
-        <details class="ask-acorr-quest-contnt">
-            <summary style="color: greenyellow;">
-                How does Time Fit help gyms improve client retention?
-            </summary>
-            <p> 
-                Allows gyms to offer a personalized experience for each client, 
-                with workout routines and diet plans tailored to their goals. 
-                It also includes an integrated community that motivates users 
-                to stay active and committed to their objectives, which helps 
-                improve long-term client retention.
-            </p>
-        </details>
+        <div class="ask-accor-quest-contnt">
+            <details class="ask-accor-quest ask-acorr-1">
+                <summary>
+                    <h3>
+                        How does Time Fit help gyms improve client retention?
+                    </h3>
+                    <i class="ask-accor-icon fa-solid fa-plus"></i>
+                </summary>
+                <div class="ask-accor-txt-contnt">
+                    <p> 
+                        Allows gyms to offer a personalized experience for each client, 
+                        with workout routines and diet plans tailored to their goals. 
+                        It also includes an integrated community that motivates users 
+                        to stay active and committed to their objectives, which helps 
+                        improve long-term client retention.
+                    </p>
+                </div>
+            </details>
+    
+            <details class="ask-accor-quest ask-acorr-2">
+                <summary>
+                    <h3>
+                        How easy is it to integrate Time Fit with a gym's daily operations?
+                    </h3>
+                    <i class="ask-accor-icon fa-solid fa-plus"></i>
+                </summary>
+                <div class="ask-accor-txt-contnt">
+                    <p> 
+                        Time Fit is designed to be easy to use and implement. Its intuitive interface allows gym administrators to manage memberships, payments, and inventory quickly and efficiently without disrupting daily operations. We also offer support to help gyms integrate seamlessly.
+                    </p>
+                </div>
+            </details>
+    
+            <details class="ask-accor-quest ask-acorr-3">
+                <summary>
+                    <h3>
+                        How does Time Fit personalize each user's experience?
+                    </h3>
+                    <i class="ask-accor-icon fa-solid fa-plus"></i>
+                </summary>
+                <div class="ask-accor-txt-contnt">
+                    <p> 
+                        Time Fit provides advanced personalization tools that allow for tailoring workout routines and diet plans based on each user's experience level, goals, time availability, and dietary preferences. In the future, it may also integrate with wearable devices to offer a real-time personalized experience.
+                    </p>
+                </div>
+            </details>
+    
+            <details class="ask-accor-quest ask-acorr-4">
+                <summary>
+                    <h3>
+                        Is Time Fit suitable for gyms of all sizes?
+                    </h3>
+                    <i class="ask-accor-icon fa-solid fa-plus"></i>
+                </summary>
+                <div class="ask-accor-txt-contnt">
+                    <p> 
+                        Yes, Time Fit is suitable for gyms of all sizes. It is designed to be accessible and affordable, offering only essential features for smaller gyms and advanced customization and management options for larger gyms. The platform adapts to the specific needs of each type of gym.
+                    </p>
+                </div>
+            </details>
+        </div>
 
-        <details class="ask-acorr-quest-contnt">
-            <summary style="color: greenyellow;">
-                How easy is it to integrate Time Fit with a gym's daily operations?
-            </summary>
-            <p> 
-                Allows gyms to offer a personalized experience for each client, 
-                with workout routines and diet plans tailored to their goals. 
-                It also includes an integrated community that motivates users 
-                to stay active and committed to their objectives, which helps 
-                improve long-term client retention.
-            </p>
-        </details>
-
-        <details class="ask-acorr-quest-contnt">
-            <summary style="color: greenyellow;">
-                How does Time Fit personalize each user's experience?
-            </summary>
-            <p> 
-                Allows gyms to offer a personalized experience for each client, 
-                with workout routines and diet plans tailored to their goals. 
-                It also includes an integrated community that motivates users 
-                to stay active and committed to their objectives, which helps 
-                improve long-term client retention.
-            </p>
-        </details>
-
-        <details class="ask-acorr-quest-contnt">
-            <summary style="color: greenyellow;">
-                Is Time Fit suitable for gyms of all sizes?
-            </summary>
-            <p> 
-                Allows gyms to offer a personalized experience for each client, 
-                with workout routines and diet plans tailored to their goals. 
-                It also includes an integrated community that motivates users 
-                to stay active and committed to their objectives, which helps 
-                improve long-term client retention.
-            </p>
-        </details>
-
-    </section> -->
+    </section>
 
 </template>
 
@@ -447,10 +460,10 @@
         justify-items: center;
     }
 
-    .title-cards-content h1 {
+    .title-cards-content h2 {
         text-align: center;
         justify-content: center;
-        font-size: 2.2rem;
+        font-size: 2.4em;
         color: #ff6400;
         margin: 0 auto;
         font-weight: 500;
@@ -527,8 +540,6 @@
         cursor: pointer;
     }
 
-
-
     /* Styles extras but not functional */
 
     /* .team-membs-content figure {
@@ -551,7 +562,7 @@
             margin-bottom: 2em;
         }
 
-        .title-cards-content h1 {
+        .title-cards-content h2 {
             font-size: 1.8rem;
         }
 
@@ -562,4 +573,117 @@
 
     /* ----- Main: Frequently asked question section ----- */
 
+    /* Styles of main container */
+
+    .ask-accor-contnt-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        height: 100%;
+        margin-bottom: 3em;
+
+    }
+
+    /* Styles for title (is a h2)
+    */
+
+    .ask-accor-contnt-main h2 {
+        color: rgb(255 255 255 / 0.70);
+        letter-spacing: 1px;
+        text-align: center;
+        font-size: 2.4em;
+    }
+
+    /* Styles for accordion container (is a div)
+    */
+
+    .ask-accor-quest-contnt {
+        display: block;
+        margin-left: 2em;
+        margin-right: 2em;
+        margin-top: 3em;
+        width: 90%;
+        max-width: 90em;
+        /* background-color: #FF6400; */
+    }
+
+    .ask-accor-quest-contnt details {
+        padding-bottom: 2em;
+    }
+
+    /* Styles for title and icon */
+
+    .ask-accor-quest summary{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: rgb(255 255 255 / 0.70);
+        margin-bottom: 1em;
+        padding: 1em;
+        border-radius: 20px;
+        transition-duration: 400ms;
+    }
+
+    .ask-accor-quest summary:hover {
+        background-color: #FF6400;
+        color: #000;
+    }
+
+    .ask-accor-quest h3 {
+        font-size: 1.5em;   
+    }
+
+    /* -- Style for icons -- */
+
+    .ask-accor-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Styles for text container and paragraph */
+
+    .ask-accor-txt-contnt {
+        /* -- Color and form styles */
+        background-color: #68391d;
+
+        /* -- Forma romboide */
+        clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);   
+        /* background: linear-gradient(89deg, #FF6400,#68391d,#272829); */
+
+        /* -- Shadows */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+        padding: 3em;
+    }
+
+    .ask-accor-quest p {
+        color: #fff;
+        letter-spacing: 1px;
+    }
+
+    /* For screen smaller */
+
+    @media(width <= 788px) {
+
+        .ask-accor-contnt-main h2 {
+            font-size: 1.8em;
+        }
+
+        .ask-accor-icon {
+            display: none;
+        }
+
+        .ask-accor-quest summary {
+            justify-content: center;
+            border: solid #FF6400 1px;
+            text-align: center
+        }
+
+        .ask-accor-quest h3 {
+            font-size: 1.2em;
+        }
+    }
+    
 </style>
