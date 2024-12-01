@@ -127,17 +127,17 @@
               <h5>Follow us</h5>
               <div class="social-icons">
                 <!-- Íconos de redes sociales -->
-                <a href="#" class="social-icon" target="_blank">
+                <a href="https://www.facebook.com/share/1N51k39N97/?mibextid=LQQJ4d" class="social-icon" target="_blank">
                   <font-awesome-icon :icon="['fab', 'facebook']" />
                 </a>
-                <a href="#" class="social-icon" target="_blank">
+                <a href="https://x.com/timefit31" class="social-icon" target="_blank">
                   <font-awesome-icon :icon="['fab', 'twitter']" />
                 </a>
-                <a href="#" class="social-icon" target="_blank">
+                <a href="https://www.instagram.com/time_fit31/" class="social-icon" target="_blank">
                   <font-awesome-icon :icon="['fab', 'instagram']" />
                 </a>
-                <a href="#" class="social-icon" target="_blank">
-                  <font-awesome-icon :icon="['fab', 'linkedin-in']" />
+                <a href="https://github.com/CesarSanchez19/landing_page_time_fit" class="social-icon" target="_blank">
+                  <font-awesome-icon :icon="['fab', 'github']" />
                 </a>
               </div>
             </div>
