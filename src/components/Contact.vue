@@ -1,82 +1,67 @@
 <template>
-    <!-- Sección principal del contacto -->
     <section id="contact">
         <div class="container mt-5">
-            <!-- Título vacío, posiblemente para un diseño futuro -->
             <h1 class="text-center mb-4"></h1>
-
             <div class="row">
                 <!-- Columna izquierda: Formulario de contacto -->
                 <div class="col-12 col-md-6">
                     <h1 class="text-center mb-4">Contact Form</h1>
-                    <form action="#" method="post">
-                        <!-- Campo para el nombre -->
+                    <form @submit.prevent="saveContact">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name(s)</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Write your name here" required>
+                            <input class="form-control" name="name" v-model="contact.name" id="name" placeholder="Write your name here" required>
                         </div>
-                        <!-- Campo para el apellido -->
                         <div class="mb-3">
                             <label for="surname" class="form-label">Surname(s)</label>
-                            <input type="text" class="form-control" id="surname" name="surname" placeholder="Write your surname here" required>
+                            <input type="text" class="form-control" id="surname" v-model="contact.surname" placeholder="Write your surname here" required>
                         </div>
-                        <!-- Campo para el correo electrónico -->
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Write your email here" required>
+                            <input type="email" class="form-control" id="email" v-model="contact.email" placeholder="Write your email here" required>
                         </div>
-                        <!-- Campo para el teléfono -->
                         <div class="mb-3">
                             <label for="phone" class="form-label">Phone</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{9}" placeholder="Write your phone here">
+                            <input type="tel" class="form-control" id="phone" v-model="contact.phone" pattern="[0-9]{10}" placeholder="Write your phone here">
                         </div>
-                        <!-- Campo para el asunto -->
                         <div class="mb-3">
                             <label for="subject" class="form-label">Subject</label>
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Write your subject here" required>
+                            <input type="text" class="form-control" id="subject" v-model="contact.subject" placeholder="Write your subject here" required>
                         </div>
-                        <!-- Campo para el mensaje -->
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" name="message" id="message" rows="6" placeholder="Write your message here"></textarea>
+                            <textarea class="form-control" name="message" v-model="contact.message" id="message" rows="6" placeholder="Write your message here"></textarea>
                         </div>
-                        <!-- Botón de envío del formulario -->
                         <div>
                             <button type="submit" class="btn btn-primary submit">Submit</button>
                         </div>
                     </form>
+                    <!-- Mensaje de éxito -->
+                    <p v-if="successMessage" class="text-success mt-3">{{ successMessage }}</p>
                 </div>
 
                 <!-- Columna derecha: Mapa y detalles de contacto -->
                 <div class="col-12 col-md-6">
-                    <!-- Mapa incrustado de Google Maps -->
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.648889941564!2d-87.06636422510753!3d20.683858780880602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e2a14f13ba35%3A0x25d0481d668fb996!2sUniversidad%20Tecnol%C3%B3gica%20de%20la%20Riviera%20Maya%20-%20BIS!5e0!3m2!1ses-419!2smx!4v1729181414894!5m2!1ses-419!2smx"
                         width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    
-                    <!-- Información de contacto -->
                     <div class="contact-info">
                         <h5>Contact Information:</h5>
-                        <!-- Dirección -->
                         <p>
                             <font-awesome-icon :icon="['fas', 'location-dot']" class="social-contact" />
                             Av.Universidades S/N Ejidal, 77712 Playa del Carmen, Q.R. Mexico
                         </p>
-                        <!-- Teléfono -->
                         <p>
                             <font-awesome-icon :icon="['fas', 'phone']" class="social-contact" />
-                            +52 (984) 877 2969
+                            +52 (984) 276 5180
                         </p>
-                        <!-- Correo electrónico -->
                         <p>
                             <font-awesome-icon :icon="['fas', 'envelope']" class="social-contact" />
-                            Timefit19@gmail.com
+                            Timefit31@gmail.com
                         </p>
-                        <!-- Horario -->
                         <p>
                             <font-awesome-icon :icon="['fas', 'clock']" class="social-contact" />
-                            Monday to Sunday: 8:00 AM- 18:00 PM
+                            Monday to Friday: 8:00 AM- 18:00 PM
                         </p>
                     </div>
                 </div>
@@ -85,10 +70,36 @@
     </section>
 </template>
 
-<script>
-/* Exportación de componente vacío, probablemente será completado más tarde */
-export default {};
+<script setup>
+import { ref } from "vue";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+
+// Estados reactivos
+const contact = ref({
+    name: "",
+    surname: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+});
+
+const successMessage = ref("");
+
+// Método para guardar el contacto
+const saveContact = async () => {
+    try {
+        const db = getFirestore(); // Instancia de Firestore
+        await addDoc(collection(db, "contacts"), contact.value); // Guardar en la colección 'contacts'
+        successMessage.value = "Your message has been sent successfully!";
+        // Reiniciar el formulario
+        contact.value = { name: "", surname: "", email: "", phone: "", subject: "", message: "" };
+    } catch (error) {
+        console.error("Error saving contact:", error);
+    }
+};
 </script>
+
 
 <style scoped>
 /* Define un contenedor de formulario con estilos específicos */

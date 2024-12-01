@@ -99,30 +99,28 @@
               <h5>Quick Links</h5>
               <ul class="list-unstyled footer-links">
                 <li>
-                  <router-link to="/" @click="scrollToSection('home')">Home</router-link>
+                  <router-link to="/" @click="handleButtonClick('home')">Home</router-link>
                 </li>
                 <li>
-                  <router-link to="/AboutUS" @click="scrollToSection('aboutus')">About Us</router-link>
+                  <router-link to="/AboutUS" @click="handleButtonClick('aboutus')">About Us</router-link>
                 </li>
                 <li>
-                  <router-link to="/Contact" @click="scrollToSection('contact')">Contact</router-link>
+                  <router-link to="/Contact" @click="handleButtonClick('contact')">Contact</router-link>
                 </li>
                 <li>
-                  <router-link to="/Pricing" @click="scrollToSection('pricing')">Plans and Pricing</router-link>
+                  <router-link to="/Pricing" @click="handleButtonClick('pricing')">Plans and Pricing</router-link>
                 </li>
                 <li>
-                  <router-link to="/Features" @click="scrollToSection('features')">Features</router-link>
+                  <router-link to="/Features" @click="handleButtonClick('features')">Features</router-link>
                 </li>
                 <li>
-                  <router-link to="/SignIn" @click="scrollToSection('signin')">Sign up</router-link>
+                  <router-link to="/SignIn" @click="handleButtonClick('signin')">Sign up</router-link>
                 </li>
                 <li>
-                  <router-link to="/Login" @click="scrollToSection('login')">Log in</router-link>
+                  <router-link to="/Login" @click="handleButtonClick('login')">Log in</router-link>
                 </li>
               </ul>
-
             </div>
-
 
             <!-- Sección del pie de página: Redes sociales -->
             <div class="col-md-4">
@@ -190,6 +188,7 @@ const handleSignOut = () => {
     });
 };
 
+
 // Método para alternar el menú desplegable
 const toggleMenu = () => {
   const menu = document.getElementById("navbarNav");
@@ -200,7 +199,7 @@ const toggleMenu = () => {
   }
 };
 
-// Método para cerrar el menú al hacer clic en un enlace
+// Método para cerrar el menú desplegable
 const closeMenu = () => {
   const menu = document.getElementById("navbarNav");
   if (menu.classList.contains("show")) {
@@ -208,7 +207,7 @@ const closeMenu = () => {
   }
 };
 
-// Método para desplazarse suavemente a una sección específica
+// Método para desplazarse suavemente a la parte superior de la página
 const scrollToSection = (sectionId) => {
   nextTick(() => {
     const element = document.getElementById(sectionId);
@@ -216,6 +215,31 @@ const scrollToSection = (sectionId) => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   });
+};
+
+// Manejar el clic en los enlaces de la lista y redirigir
+const handleButtonClick = (route) => {
+  // Primero desplazarse hacia la parte superior de la página
+  scrollToSection('home');
+
+  // Realizar la navegación a la ruta correspondiente después del desplazamiento
+  setTimeout(() => {
+    if (route === 'home') {
+      router.push('/');
+    } else if (route === 'aboutus') {
+      router.push('/AboutUS');
+    } else if (route === 'contact') {
+      router.push('/Contact');
+    } else if (route === 'pricing') {
+      router.push('/Pricing');
+    } else if (route === 'features') {
+      router.push('/Features');
+    } else if (route === 'signin') {
+      router.push('/SignIn');
+    } else if (route === 'login') {
+      router.push('/Login');
+    }
+  }, 500); // Esperar medio segundo para que el desplazamiento se complete antes de redirigir
 };
 </script>
 
@@ -229,7 +253,8 @@ const scrollToSection = (sectionId) => {
 
 /* Estilo global para el cuerpo del documento */
 body {
-  font-family: 'Poppins',Arial, Helvetica, sans-serif; /* Por defecto, es Poppins, y si no, continua con el resto */
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  /* Por defecto, es Poppins, y si no, continua con el resto */
   /* Define la fuente general para el cuerpo */
   background-color: #272829;
   /* Establece un color de fondo oscuro */
