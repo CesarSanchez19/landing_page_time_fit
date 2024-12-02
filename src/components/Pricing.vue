@@ -401,7 +401,7 @@
   text-transform: uppercase;
   word-wrap: break-word;
   /*margin-bottom: 20px;*/
-  margin-top: -200px;
+  margin-top: -100px;
   margin-left: auto;
 }
 
@@ -414,7 +414,7 @@
   font-family: Outfit;
   font-weight: 400;
   word-wrap: break-word;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   margin-left: 0; 
   margin-right: auto; 
   line-height: 1.6;
