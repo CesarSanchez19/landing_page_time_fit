@@ -95,7 +95,8 @@
                 <!-- Promotional video -->
                 <!-- <video src="https://youtu.be/TlJbu0BMLaY?si=BNwZxkJLaF4XML2Q">
                 </video> -->
-                <iframe class="video-promo" src="https://www.youtube.com/embed/TlJbu0BMLaY?si=BNwZxkJLaF4XML2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- <iframe class="video-promo" src="https://www.youtube.com/embed/TlJbu0BMLaY?si=BNwZxkJLaF4XML2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                <iframe class="video-promo" src="https://www.youtube.com/embed/cc2qc1kcy7g?si=3vGkUR_5-S35jma6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
                 <div class="cont-text-bttn-video">
                     <!-- Paragraph video's -->
