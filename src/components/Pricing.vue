@@ -400,10 +400,11 @@
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
-  /*margin-bottom: 20px;*/
-  margin-top: -300px;
-  margin-left: auto;
+  position: relative; /* Posición relativa */
+  top: -20px; /* Ajusta hacia arriba */
+  margin: 0 auto; /* Centra horizontalmente */
 }
+
 
 .text1 {
   max-width: 600px;
@@ -414,7 +415,7 @@
   font-family: Outfit;
   font-weight: 400;
   word-wrap: break-word;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   margin-left: 0; 
   margin-right: auto; 
   line-height: 1.6;
