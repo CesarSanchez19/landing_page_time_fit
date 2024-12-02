@@ -11,11 +11,7 @@
       </div>
       <button class="button" onclick="location.href='#firstSection'">
         Learn More
-        <img
-          :src="require('@/assets/arrow-down.svg')"
-          alt="icon"
-          class="icon"
-        />
+        <img :src="require('@/assets/arrow-down.svg')" alt="icon" class="icon" />
       </button>
     </div>
 
@@ -34,11 +30,7 @@
         </div>
 
         <div class="image-section">
-          <img
-            :src="require('@/assets/firts.png')"
-            alt="Time Fit Applications"
-            class="img1"
-          />
+          <img :src="require('@/assets/firts.png')" alt="Time Fit Applications" class="img1" />
         </div>
       </div>
 
@@ -66,11 +58,7 @@
           </div>
 
           <div class="image-section1">
-            <img
-              :src="require('@/assets/second.png')"
-              alt="Time Fit Applications"
-              class="img2"
-            />
+            <img :src="require('@/assets/second.png')" alt="Time Fit Applications" class="img2" />
           </div>
         </div>
       </div>
@@ -80,11 +68,7 @@
       <div class="container2">
         <div class="content2">
           <div class="image-section2">
-            <img
-              :src="require('@/assets/third.png')"
-              alt="Time Fit Applications"
-              class="img3"
-            />
+            <img :src="require('@/assets/third.png')" alt="Time Fit Applications" class="img3" />
           </div>
           <div class="text-section2">
             <h2>Customized Workouts for Your Goals</h2>
@@ -123,11 +107,7 @@
           </div>
 
           <div class="image-section1">
-            <img
-              :src="require('@/assets/forth.png')"
-              alt="Time Fit Applications"
-              class="img2"
-            />
+            <img :src="require('@/assets/forth.png')" alt="Time Fit Applications" class="img2" />
           </div>
         </div>
       </div>
@@ -137,11 +117,7 @@
       <div class="container2">
         <div class="content2">
           <div class="image-section2">
-            <img
-              :src="require('@/assets/five.png')"
-              alt="Time Fit Applications"
-              class="img3"
-            />
+            <img :src="require('@/assets/five.png')" alt="Time Fit Applications" class="img3" />
           </div>
           <div class="text-section2">
             <h2>Connect and Share with the Community</h2>
@@ -179,11 +155,7 @@
           </div>
 
           <div class="image-section1">
-            <img
-              :src="require('@/assets/six.png')"
-              alt="Time Fit Applications"
-              class="img2"
-            />
+            <img :src="require('@/assets/six.png')" alt="Time Fit Applications" class="img2" />
           </div>
         </div>
       </div>
@@ -217,11 +189,7 @@
           </div>
 
           <div class="image-section1">
-            <img
-              :src="require('@/assets/seven.png')"
-              alt="Time Fit Applications"
-              class="img22"
-            />
+            <img :src="require('@/assets/wepapp/webappimg1.png')" alt="Time Fit Applications" class="img22" />
           </div>
         </div>
       </div>
@@ -231,24 +199,19 @@
       <div class="container2">
         <div class="content2">
           <div class="image-section2">
-            <img
-              :src="require('@/assets/eight.png')"
-              alt="Time Fit Applications"
-              class="img33"
-            />
+            <img :src="require('@/assets/wepapp/webappimg2.png')" alt="Time Fit Applications" class="img33" />
           </div>
           <div class="text-section2">
-            <h2>Efficient Client Administration</h2>
+            <h2>Users at Your Fingertips</h2>
             <p>
-              The Membership Management section in Time Fit allows
-              administrators to track all gym members in detail. From this area,
-              they can access each member's information, such as membership
-              type, contact details, and enrollment status. Administrators can
-              also register new members by filling out a form with personal
-              details, address, and membership type, enabling complete and
-              efficient management of subscriptions. This section is essential
-              for keeping client information organized and up-to-date, allowing
-              for personalized and quality service.
+              The users section in Time Fit provides an intuitive interface for efficiently managing all gym member
+              information. Administrators can view and manage a complete list of users that includes essential data such
+              as unique ID, contact information, and membership status. The table presents a clear layout with organized
+              columns showing member name, email, phone, and registration date. The system uses visual status indicators
+              (Active, Inactive, Pending) to quickly identify each user's situation. The search function at the top
+              allows locating specific members, while the "Register member" button facilitates adding new users. The
+              pagination at the bottom enables easy navigation between multiple pages of records, ensuring efficient
+              management even with large user bases.
             </p>
           </div>
         </div>
@@ -259,28 +222,19 @@
       <div class="container1">
         <div class="content1">
           <div class="text-section1">
-            <h2>Organize and Manage Your Staff</h2>
+            <h2>Maximize Your Gym's Potential with Time Fit</h2>
             <p>
-              The Team Management section in Time Fit provides administrators
-              with complete control over their staff. This section allows them
-              to view a detailed list of all team members, along with contact
-              information, roles, and last activity. Additionally,
-              administrators can add new team members by entering basic details
-              such as name, email, and assigned role (e.g., Administrator,
-              Consultant, or Employee). It is also possible to adjust specific
-              permissions based on the gym's needs, ensuring that each staff
-              member only has access to the areas relevant to their role. This
-              tool simplifies staff management, enhancing organization and
-              optimizing team administration.
+              The memberships and services module in Time Fit transforms gym management with an all-in-one control
+              system. Track membership performance through intuitive visual metrics showing occupancy rates and
+              membership distribution across three strategic tiers. The dynamic pricing display lets you manage multiple
+              subscription periods while monitoring member engagement. The integrated services marketplace below
+              streamlines the management of additional revenue streams, from specialized fitness classes to premium
+              wellness services, complete with real-time status monitoring and capacity management.
             </p>
           </div>
 
           <div class="image-section1">
-            <img
-              :src="require('@/assets/nine.png')"
-              alt="Time Fit Applications"
-              class="img22"
-            />
+            <img :src="require('@/assets/wepapp/webappimg3.png')" alt="Time Fit Applications" class="img22" />
           </div>
         </div>
       </div>
@@ -290,24 +244,59 @@
       <div class="container2">
         <div class="content2">
           <div class="image-section2">
-            <img
-              :src="require('@/assets/ten.png')"
-              alt="Time Fit Applications"
-              class="img33"
-            />
+            <img :src="require('@/assets/wepapp/webappimg4.png')" alt="Time Fit Applications" class="img33" />
           </div>
           <div class="text-section2">
-            <h2>Full Control of Your Inventory</h2>
+            <h2>Efficient Management of Collaborators</h2>
             <p>
-              The Sales Management section in Time Fit allows administrators to
-              track all gym members in detail. From this area, they can access
-              each member's information, such as membership type, contact
-              details, and enrollment status. Administrators can also register
-              new members by filling out a form with personal details, address,
-              and membership type, enabling complete and efficient management of
-              subscriptions. This section is essential for keeping client
-              information organized and up-to-date, allowing for personalized
-              and quality service.
+              The collaborators section in the Time Fit web app allows administrators to efficiently manage gym staff.
+              Here, they can register new collaborators, assign roles or permissions, and track recent activity. A
+              well-structured table displays key information such as names, email addresses, roles, and the last
+              activity date. Additionally, a search bar and options for filtering and sorting make it easy to find and
+              organize data. With a prominent button for registering new collaborators, this tool streamlines team
+              management and ensures precise control in real time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grisclaro">
+      <div class="container1">
+        <div class="content1">
+          <div class="text-section1">
+            <h2>Track and Analyze Your Gym’s Revenue Effectively</h2>
+            <p>
+              This section displays the revenue generated from gym services, products, and memberships. Administrators
+              can track weekly earnings through a detailed bar graph that highlights actual revenue, increases, and
+              decreases. Key metrics such as products sold, memberships sold, new clients, and total expenses are shown
+              on the right-hand side, providing a comprehensive snapshot of performance. A table at the bottom showcases
+              the top-selling products, including their quantities sold, revenue generated, and percentage contribution,
+              offering valuable insights into sales trends. This feature is designed to help administrators make
+              informed decisions and optimize revenue streams.
+            </p>
+          </div>
+
+          <div class="image-section1">
+            <img :src="require('@/assets/wepapp/webappimg5.png')" alt="Time Fit Applications" class="img22" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grisoscuro">
+      <div class="container2">
+        <div class="content2">
+          <div class="image-section2">
+            <img :src="require('@/assets/wepapp/webappimg6.png')" alt="Time Fit Applications" class="img33" />
+          </div>
+          <div class="text-section2">
+            <h2>Smart Product Inventory Management</h2>
+            <p>
+              Monitor and efficiently manage your gym's product stock with this intuitive and functional tool. The
+              Inventory Control section provides a clear overview of your current product status, highlighting
+              bestsellers, critical stock levels, and available categories. Streamline your operations with advanced
+              search, custom filters, quick product registration, and comprehensive report downloads.
             </p>
           </div>
         </div>
@@ -335,11 +324,7 @@
           </div>
 
           <div class="image-section1">
-            <img
-              :src="require('@/assets/eleven.png')"
-              alt="Time Fit Applications"
-              class="img22"
-            />
+            <img :src="require('@/assets/wepapp/webappimg7.png')" alt="Time Fit Applications" class="img22" />
           </div>
         </div>
       </div>
@@ -349,52 +334,16 @@
       <div class="container2">
         <div class="content2">
           <div class="image-section2">
-            <img
-              :src="require('@/assets/twelve.png')"
-              alt="Time Fit Applications"
-              class="img33"
-            />
+            <img :src="require('@/assets/wepapp/webappimg8.png')" alt="Time Fit Applications" class="img33" />
           </div>
           <div class="text-section2">
-            <h2>Organize Your Ideas and Notes</h2>
+            <h2>Stay Organized, Focused, and In Control with Ease!</h2>
             <p>
-              The Notes section in Time Fit allows administrators to record
-              ideas, pending tasks, and important reminders all in one place.
-              With a simple and organized interface, users can create, edit, and
-              manage multiple notes, ensuring that no idea is lost and all
-              pending tasks are easily accessible. This tool is perfect for
-              jotting down details about the gym’s daily operations, planning
-              improvement strategies, or keeping track of topics to discuss in
-              meetings. Additionally, the categorized organization enables quick
-              access to relevant information when needed.
+              Explore the "Notes" section in Time Fit Admin, crafted to help you manage tasks, reminders, and key
+              messages effortlessly. Customize your notes, sort them by categories like courses, reminders, and
+              suggestions, and never lose sight of your priorities. Keep everything within reach and simplify your daily
+              operations!
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="grisclaro">
-      <div class="container1">
-        <div class="content1">
-          <div class="text-section1">
-            <h2>Keep Track of Your To-Do List</h2>
-            <p>
-              The Tasks section in Time Fit allows administrators to organize
-              and prioritize their daily responsibilities. This tool facilitates
-              the creation, viewing, and tracking of specific tasks, assigning a
-              deadline and priority level for each activity. Administrators can
-              mark tasks as completed once they are finished, ensuring focus on
-              the gym's objectives. From equipment maintenance to paying bills,
-              this section helps manage time and resources efficiently.
-            </p>
-          </div>
-
-          <div class="image-section1">
-            <img
-              :src="require('@/assets/thirteen.png')"
-              alt="Time Fit Applications"
-              class="img22"
-            />
           </div>
         </div>
       </div>
@@ -442,7 +391,7 @@
   z-index: 1;
 }
 
-.body > * {
+.body>* {
   position: relative;
   z-index: 2;
 }
@@ -452,7 +401,7 @@
   text-align: center;
   color: #d9d9d9;
   font-size: 80px;
-  font-family: Inter;
+  font-family: poppins, sans-serif;
   font-weight: 800;
   line-height: 112px;
   word-wrap: break-word;
@@ -464,7 +413,7 @@
   text-align: center;
   color: white;
   font-size: 24px;
-  font-family: Inter;
+  font-family: poppins, sans-serif;
   font-weight: 400;
   word-wrap: break-word;
   margin-bottom: 30px;
@@ -478,7 +427,7 @@
   text-align: center;
   color: white;
   font-size: 20px;
-  font-family: Outfit, sans-serif;
+  font-family: poppins, sans-serif;
   font-weight: 600;
   cursor: pointer;
   margin: 0 auto;
@@ -652,6 +601,7 @@
 
 /* RESPONSIVIDAD */
 @media (max-width: 1024px) {
+
   .content,
   .content1,
   .content2 {
