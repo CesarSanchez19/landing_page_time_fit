@@ -456,6 +456,7 @@
   font-weight: 800;
   line-height: 112px;
   word-wrap: break-word;
+  margin-bottom: 30px;
 }
 
 .text1 {
@@ -466,7 +467,7 @@
   font-family: Inter;
   font-weight: 400;
   word-wrap: break-word;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .button {

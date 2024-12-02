@@ -4,10 +4,12 @@
       <div class="title">Why should you choose us?</div>
 
       <div class="text1">
-        Time Fit stands out as the ideal solution for gyms seeking to optimize
-        their operations and provide an exceptional experience for their users.
-        Here are some reasons why Time Fit is the best choice to take your gym
-        to the next level:
+        <p>
+          Time Fit stands out as the ideal solution for gyms seeking to optimize
+          their operations and provide an exceptional experience for their
+          users. Here are some reasons why Time Fit is the best choice to take
+          your gym to the next level:
+        </p>
       </div>
       <button class="buttoncreate">Create Account</button>
     </div>
@@ -373,9 +375,25 @@
   position: relative;
 }
 
+.body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.body > * {
+  position: relative;
+  z-index: 2;
+}
+
 .title {
   display: flex;
-  width: 60%;
+  width: 100%;
   color: white;
   font-size: 80px;
   font-family: Inter;
@@ -384,20 +402,27 @@
   word-wrap: break-word;
   /*margin-bottom: 20px;*/
   margin-top: -300px;
-  margin-left: -600px;
+  margin-left: auto;
 }
 
 .text1 {
-  display: flex;
-  width: 50%;
+  max-width: 600px;
+  display: block;
+  width: 100%;
   color: white;
   font-size: 18px;
   font-family: Outfit;
   font-weight: 400;
   word-wrap: break-word;
   margin-bottom: 80px;
-  margin-left: -700px;
+  margin-left: 0; 
+  margin-right: auto; 
+  line-height: 1.6;
+  white-space: normal;
+  text-align: left; 
 }
+
+
 
 .buttoncreate {
   display: flex;
@@ -434,16 +459,17 @@
   border-radius: 23px;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  height: auto;
   padding: 20px;
   top: -150px;
+  z-index: 1;
 }
 
 .icon {
+  display: flex;
   width: 20%;
   height: 20%;
-  margin-top: -20px;
-  margin-bottom: 20px;
+  margin-top: 0px;
 }
 
 .titlecard {
@@ -685,12 +711,12 @@
   width: 300px;
   background-color: #2c2c2c;
   border-radius: 10px;
-  padding: 20px ;
+  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
-.plan:hover{
+.plan:hover {
   background-color: #e9762a;
 }
 
@@ -712,7 +738,7 @@
 }
 
 .plan button {
-  background-color: #FA4F06;
+  background-color: #fa4f06;
   color: white;
   border: none;
   padding: 10px 57px;
@@ -723,7 +749,7 @@
 }
 
 .plan button:hover {
-  background-color: #45474B;
+  background-color: #45474b;
 }
 
 .details h3 {
@@ -745,13 +771,235 @@
 
 .basic-plan {
   background-color: #45474b;
+  width: 28%;
 }
 
 .professional-plan {
   background-color: #45474b;
+  width: 28%;
 }
 
 .master-plan {
   background-color: #45474b;
+  width: 28%;
 }
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .body {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 50px;
+    margin-top: -150px;
+  }
+
+  .text1 {
+    font-size: 16px;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .buttoncreate {
+    font-size: 18px;
+    padding: 8px 15px;
+  }
+
+  .content {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .title2 {
+    font-size: 30px;
+    margin-left: 5%;
+  }
+
+  .image-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .imagen-rec {
+    width: 80%;
+    height: 300px;
+  }
+
+  .foodimagen {
+    width: 100%;
+    max-width: 300px;
+    margin-left: 0;
+  }
+
+  .foodtext {
+    width: 80%;
+    font-size: 16px;
+    margin-left: 10%;
+  }
+
+  .button3 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .recipe-categories ul li {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .plans-container {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .plan {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .basic-plan,
+  .professional-plan,
+  .master-plan {
+    width: 100%;
+  }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .title {
+    font-size: 70px;
+    margin-top: -250px;
+  }
+
+  .text1 {
+    font-size: 18px;
+    max-width: 80%;
+    margin-bottom: 60px;
+  }
+
+  .buttoncreate {
+    font-size: 18px;
+    padding: 8px 18px;
+  }
+
+  .content {
+    flex-direction: row;
+    height: 40vh;
+    padding: 25px;
+  }
+
+  .card {
+    width: 45%;
+    height: auto;
+  }
+
+  .title2 {
+    font-size: 32px;
+  }
+
+  .foodimagen {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .foodtext {
+    font-size: 18px;
+    margin-left: 50px;
+  }
+
+  .recipe-categories ul li {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .plans-container {
+    flex-direction: row;
+    padding: 80px;
+  }
+
+  .plan {
+    width: 30%;
+  }
+
+  .basic-plan,
+  .professional-plan,
+  .master-plan {
+    width: 30%;
+  }
+}
+
+/* Pantallas grandes (escritorios) */
+@media (min-width: 1024px) {
+  .title {
+    font-size: 90px;
+    margin-top: -300px;
+  }
+
+  .text1 {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 80px;
+  }
+
+  .buttoncreate {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+
+  .content {
+    height: 35vh;
+    flex-direction: row;
+  }
+
+  .card {
+    width: 24%;
+    height: 40vh;
+  }
+
+  .title2 {
+    font-size: 36px;
+  }
+
+  .image-container {
+    gap: 50px;
+  }
+
+  .foodimagen {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .foodtext {
+    font-size: 18px;
+    margin-left: 60px;
+  }
+
+  .recipe-categories ul li {
+    font-size: 24px;
+  }
+
+  .plans-container {
+    flex-direction: row;
+    padding: 100px;
+  }
+
+  .plan {
+    width: 28%;
+  }
+
+  .basic-plan,
+  .professional-plan,
+  .master-plan {
+    width: 28%;
+  }
+}
+
 </style>
