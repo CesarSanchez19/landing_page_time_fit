@@ -102,6 +102,302 @@
         </div>
       </div>
     </div>
+
+    <div class="grisclaro">
+      <div class="container1">
+        <div class="content1">
+          <div class="text-section1">
+            <h2>Personalized Meal Plans for Your Goals</h2>
+            <p>
+              The Time Fit diet section provides users with meal plans tailored
+              to their specific goals, whether it's gaining muscle mass, body
+              definition, or achieving a caloric deficit. Each plan is organized
+              into meals throughout the day (breakfast, mid-morning snack,
+              lunch, pre-workout snack, and dinner) to ensure balanced
+              nutrition. Users can view details for each meal, including
+              calories, protein, carbs, and fats breakdown, as well as a list of
+              ingredients and portion sizes. Additionally, they have the option
+              to mark meals as completed to track their daily nutrition intake.
+            </p>
+          </div>
+
+          <div class="image-section1">
+            <img
+              :src="require('@/assets/forth.png')"
+              alt="Time Fit Applications"
+              class="img2"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grisoscuro">
+      <div class="container2">
+        <div class="content2">
+          <div class="image-section2">
+            <img
+              :src="require('@/assets/five.png')"
+              alt="Time Fit Applications"
+              class="img3"
+            />
+          </div>
+          <div class="text-section2">
+            <h2>Connect and Share with the Community</h2>
+            <p>
+              The Forum section in Time Fit is an interactive space where users
+              can connect with other members, share experiences, ask questions,
+              and offer advice related to fitness and nutrition. Users can
+              browse through different categories such as workout routines, diet
+              plans, wellness tips, and more. Each user has the ability to
+              create new posts, comment on existing threads, and participate in
+              discussions to enrich their knowledge and motivate each other.
+              Additionally, the forum allows users to receive notifications
+              about replies and updates on topics of interest, fostering an
+              active and engaged community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grisclaro">
+      <div class="container1">
+        <div class="content1">
+          <div class="text-section1">
+            <h2>Customize and Manage Your Information</h2>
+            <p>
+              The User Profile section in Time Fit allows users to easily
+              personalize and manage their information. Users can update their
+              profile picture, modify their name, email, username, and password
+              to keep their account up to date. This section is essential for
+              providing each user with a personalized experience and easy access
+              to the platform. With just a few taps, users can make changes and
+              ensure their profile reflects their identity.
+            </p>
+          </div>
+
+          <div class="image-section1">
+            <img
+              :src="require('@/assets/six.png')"
+              alt="Time Fit Applications"
+              class="img2"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grisoscuro">
+      <div class="mobile-features">
+        <h3>Web Application Features for Administrators</h3>
+      </div>
+    </div>
+
+    <div class="grisclaro">
+      <div class="container1">
+        <div class="content1">
+          <div class="text-section1">
+            <h2>Comprehensive Dashboard for Administrators</h2>
+            <p>
+              The home screen of the Time Fit web app provides administrators
+              with a clear, detailed overview of all gym operations. In this
+              section, administrators can view key statistics, such as the
+              number of clients and employees, revenue earned, and orders in
+              progress or completed. It also includes a demographic chart
+              showing the age distribution of clients, along with a calendar
+              displaying scheduled events and upcoming activities. The services
+              section provides quick access to different areas, such as
+              memberships, training, nutrition, and more, while the notes area
+              organizes important reminders and tasks. This dashboard is
+              designed to facilitate efficient management and keep
+              administrators informed about the gym's performance in real-time.
+            </p>
+          </div>
+
+          <div class="image-section1">
+            <img
+              :src="require('@/assets/seven.png')"
+              alt="Time Fit Applications"
+              class="img22"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grisoscuro">
+      <div class="container2">
+        <div class="content2">
+          <div class="image-section2">
+            <img
+              :src="require('@/assets/eight.png')"
+              alt="Time Fit Applications"
+              class="img33"
+            />
+          </div>
+          <div class="text-section2">
+            <h2>Efficient Client Administration</h2>
+            <p>
+              The Membership Management section in Time Fit allows
+              administrators to track all gym members in detail. From this area,
+              they can access each member's information, such as membership
+              type, contact details, and enrollment status. Administrators can
+              also register new members by filling out a form with personal
+              details, address, and membership type, enabling complete and
+              efficient management of subscriptions. This section is essential
+              for keeping client information organized and up-to-date, allowing
+              for personalized and quality service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grisclaro">
+      <div class="container1">
+        <div class="content1">
+          <div class="text-section1">
+            <h2>Organize and Manage Your Staff</h2>
+            <p>
+              The Team Management section in Time Fit provides administrators
+              with complete control over their staff. This section allows them
+              to view a detailed list of all team members, along with contact
+              information, roles, and last activity. Additionally,
+              administrators can add new team members by entering basic details
+              such as name, email, and assigned role (e.g., Administrator,
+              Consultant, or Employee). It is also possible to adjust specific
+              permissions based on the gym's needs, ensuring that each staff
+              member only has access to the areas relevant to their role. This
+              tool simplifies staff management, enhancing organization and
+              optimizing team administration.
+            </p>
+          </div>
+
+          <div class="image-section1">
+            <img
+              :src="require('@/assets/nine.png')"
+              alt="Time Fit Applications"
+              class="img22"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grisoscuro">
+      <div class="container2">
+        <div class="content2">
+          <div class="image-section2">
+            <img
+              :src="require('@/assets/ten.png')"
+              alt="Time Fit Applications"
+              class="img33"
+            />
+          </div>
+          <div class="text-section2">
+            <h2>Full Control of Your Inventory</h2>
+            <p>
+              The Sales Management section in Time Fit allows administrators to
+              track all gym members in detail. From this area, they can access
+              each member's information, such as membership type, contact
+              details, and enrollment status. Administrators can also register
+              new members by filling out a form with personal details, address,
+              and membership type, enabling complete and efficient management of
+              subscriptions. This section is essential for keeping client
+              information organized and up-to-date, allowing for personalized
+              and quality service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grisclaro">
+      <div class="container1">
+        <div class="content1">
+          <div class="text-section1">
+            <h2>Calendar Management and Scheduling</h2>
+            <p>
+              The Calendar module in Time Fit provides administrators with a
+              comprehensive view of all scheduled activities at the gym. From
+              this section, key events like training sessions, workshops,
+              fitness evaluations, and team meetings can be organized and
+              managed. The interface allows switching between monthly, weekly,
+              and daily views, offering flexibility to fit the specific
+              scheduling needs of the gym. This system enables efficient
+              planning, prevents scheduling conflicts, and ensures smooth
+              coordination between staff and clients. Additionally, the
+              quick-add event feature optimizes workflow, keeping the entire
+              team aligned with the scheduled activities.
+            </p>
+          </div>
+
+          <div class="image-section1">
+            <img
+              :src="require('@/assets/eleven.png')"
+              alt="Time Fit Applications"
+              class="img22"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grisoscuro">
+      <div class="container2">
+        <div class="content2">
+          <div class="image-section2">
+            <img
+              :src="require('@/assets/twelve.png')"
+              alt="Time Fit Applications"
+              class="img33"
+            />
+          </div>
+          <div class="text-section2">
+            <h2>Organize Your Ideas and Notes</h2>
+            <p>
+              The Notes section in Time Fit allows administrators to record
+              ideas, pending tasks, and important reminders all in one place.
+              With a simple and organized interface, users can create, edit, and
+              manage multiple notes, ensuring that no idea is lost and all
+              pending tasks are easily accessible. This tool is perfect for
+              jotting down details about the gym’s daily operations, planning
+              improvement strategies, or keeping track of topics to discuss in
+              meetings. Additionally, the categorized organization enables quick
+              access to relevant information when needed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grisclaro">
+      <div class="container1">
+        <div class="content1">
+          <div class="text-section1">
+            <h2>Keep Track of Your To-Do List</h2>
+            <p>
+              The Tasks section in Time Fit allows administrators to organize
+              and prioritize their daily responsibilities. This tool facilitates
+              the creation, viewing, and tracking of specific tasks, assigning a
+              deadline and priority level for each activity. Administrators can
+              mark tasks as completed once they are finished, ensuring focus on
+              the gym's objectives. From equipment maintenance to paying bills,
+              this section helps manage time and resources efficiently.
+            </p>
+          </div>
+
+          <div class="image-section1">
+            <img
+              :src="require('@/assets/thirteen.png')"
+              alt="Time Fit Applications"
+              class="img22"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -244,6 +540,7 @@
 .mobile-features {
   margin-top: 40px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .mobile-features h3 {
@@ -282,6 +579,12 @@
 .img2 {
   filter: drop-shadow(0 0 10px rgba(55, 57, 59, 1));
   width: 40%;
+  height: auto;
+}
+
+.img22 {
+  filter: drop-shadow(0 0 10px rgba(55, 57, 59, 1));
+  width: 75%;
   height: auto;
 }
 
@@ -335,6 +638,12 @@
 .img3 {
   filter: drop-shadow(0 0 10px rgba(40, 40, 41, 1));
   width: 40%;
+  height: auto;
+}
+
+.img33 {
+  filter: drop-shadow(0 0 10px rgba(40, 40, 41, 1));
+  width: 75%;
   height: auto;
 }
 
