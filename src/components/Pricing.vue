@@ -401,7 +401,7 @@
   text-transform: uppercase;
   word-wrap: break-word;
   /*margin-bottom: 20px;*/
-  margin-top: -300px;
+  margin-top: -200px;
   margin-left: auto;
 }
 
