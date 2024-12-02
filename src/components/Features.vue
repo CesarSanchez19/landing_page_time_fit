@@ -9,7 +9,7 @@
         users and administrators, ensuring a comprehensive and personalized
         experience.
       </div>
-      <button class="button">
+      <button class="button" onclick="location.href='#firstSection'">
         Learn More
         <img
           :src="require('@/assets/arrow-down.svg')"
@@ -18,7 +18,8 @@
         />
       </button>
     </div>
-    <div class="container">
+
+    <div class="container" id="firstSection">
       <div class="content">
         <div class="text-section">
           <h2>Two Apps, One Complete Solution</h2>
@@ -437,18 +438,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Ajusta el valor de opacidad (0.5) según sea necesario */
-  z-index: 1; /* Coloca la superposición detrás del contenido */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .body > * {
   position: relative;
-  z-index: 2; /* Asegura que el contenido esté por encima de la superposición */
+  z-index: 2;
 }
 
 .title1 {
@@ -547,11 +543,10 @@
   color: #ff4300;
 }
 
-/*Contenedor de gris claro */
-
 .grisoscuro {
   background-color: #272829;
 }
+
 .container1 {
   max-width: 1200px;
   margin: 0 auto;
@@ -601,14 +596,8 @@
   border-radius: 10px;
 }
 
-/* gris oscuro */
 .grisclaro {
-  background-color: rgba(
-    55,
-    57,
-    59,
-    1
-  ); /* Aplicando el color en formato RGBA */
+  background-color: rgba(55, 57, 59, 1);
 }
 
 .container2 {
@@ -658,5 +647,63 @@
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 1024px) {
+  .content,
+  .content1,
+  .content2 {
+    flex-direction: column;
+  }
+
+  .text-section,
+  .text-section1,
+  .text-section2 {
+    text-align: center;
+  }
+
+  .img1,
+  .img2,
+  .img3 {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .title1 {
+    font-size: 50px;
+    line-height: 1.2;
+  }
+
+  .text1 {
+    font-size: 20px;
+  }
+
+  .button {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title1 {
+    font-size: 36px;
+  }
+
+  .text1 {
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .img1,
+  .img2,
+  .img3 {
+    width: 80%;
+  }
 }
 </style>
