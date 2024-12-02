@@ -1,6 +1,7 @@
 <template>
   <section id="pricing">
     <div class="body">
+      <div class="space"></div>
       <div class="title">Why should you choose us?</div>
 
       <div class="text1">
@@ -391,6 +392,12 @@
   z-index: 2;
 }
 
+.space {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 50px; /* Ajusta la altura según el espacio que desees */
+  background-color: transparent; /* Sin color, solo espacio */
+}
+
 .title {
   display: flex;
   width: 100%;
@@ -405,7 +412,6 @@
   margin: 0 auto; /* Centra horizontalmente */
 }
 
-
 .text1 {
   max-width: 600px;
   display: block;
@@ -416,14 +422,12 @@
   font-weight: 400;
   word-wrap: break-word;
   margin-bottom: 60px;
-  margin-left: 0; 
-  margin-right: auto; 
+  margin-left: 0;
+  margin-right: auto;
   line-height: 1.6;
   white-space: normal;
-  text-align: left; 
+  text-align: left;
 }
-
-
 
 .buttoncreate {
   display: flex;
@@ -1002,5 +1006,4 @@
     width: 28%;
   }
 }
-
 </style>
