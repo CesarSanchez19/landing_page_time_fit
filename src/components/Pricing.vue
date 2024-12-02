@@ -1,7 +1,6 @@
 <template>
   <section id="pricing">
     <div class="body">
-      <div class="space"></div>
       <div class="title">Why should you choose us?</div>
 
       <div class="text1">
@@ -374,6 +373,7 @@
   align-items: center;
   padding: 20px;
   position: relative;
+  font-family: 'Poppins';
 }
 
 .body::before {
@@ -392,23 +392,19 @@
   z-index: 2;
 }
 
-.space {
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  height: 50px; /* Ajusta la altura según el espacio que desees */
-  background-color: transparent; /* Sin color, solo espacio */
-}
 
 .title {
   display: flex;
   width: 100%;
   color: white;
   font-size: 80px;
-  font-family: Inter;
+  font-family: 'Poppins';
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
   position: relative; /* Posición relativa */
-  top: -20px; /* Ajusta hacia arriba */
+  top: 20px; /* Ajusta hacia arriba */
+  /* margin-top: 4em; */
   margin: 0 auto; /* Centra horizontalmente */
 }
 
