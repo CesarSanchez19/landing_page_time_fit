@@ -13,6 +13,7 @@
       </div>
       <button class="buttoncreate">Create Account</button>
     </div>
+
     <div class="content">
       <div class="card">
         <img
@@ -54,6 +55,7 @@
         </div>
       </div>
     </div>
+
     <div>
       <div class="title2">Complete Workout Program for All Levels</div>
       <div class="rectangles">
@@ -387,7 +389,7 @@
   z-index: 1;
 }
 
-.body > * {
+.body>* {
   position: relative;
   z-index: 2;
 }
@@ -505,7 +507,7 @@
   font-weight: 700;
   word-wrap: break-word;
   margin-bottom: 25px;
-  margin-left: 5%;
+  margin-left: auto;
 }
 
 .rectangles {
@@ -586,7 +588,7 @@
 .recipe-section {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   gap: 20px; /* Espacio entre las secciones */
   padding: 20px;
   margin-bottom: 40px;
@@ -597,13 +599,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .foodimagen {
   width: 100%;
   max-width: 400px;
   border-radius: 8px;
-  margin-left: 100px;
 }
 
 .recipe-description {
@@ -821,7 +823,7 @@
 
   .title2 {
     font-size: 30px;
-    margin-left: 5%;
+    margin-left: auto;
   }
 
   .image-container {
@@ -834,10 +836,31 @@
     height: 300px;
   }
 
-  .foodimagen {
-    width: 100%;
-    max-width: 300px;
+  .title3 {
     margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .recipe-section{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .recipe-image{
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .foodimagen {
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .recipe-description {
+    flex: 1 1 100%;
+    text-align: center;
   }
 
   .foodtext {
@@ -847,8 +870,8 @@
   }
 
   .button3 {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .recipe-categories ul li {
