@@ -400,10 +400,11 @@
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
-  /*margin-bottom: 20px;*/
-  margin-top: -100px;
-  margin-left: auto;
+  position: relative; /* Posición relativa */
+  top: -20px; /* Ajusta hacia arriba */
+  margin: 0 auto; /* Centra horizontalmente */
 }
+
 
 .text1 {
   max-width: 600px;
