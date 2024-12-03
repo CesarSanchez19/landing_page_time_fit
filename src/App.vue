@@ -11,11 +11,10 @@
         <nav class="navbar navbar-expand-lg navbar-dark">
           <div class="container">
             <!-- Logo o marca del sitio -->
-            <a class="navbar-brand" href="#">
+            <router-link to="/" class="navbar-brand" @click="closeMenu">
               <!-- Ícono de FontAwesome para representar la marca -->
               <font-awesome-icon :icon="['fas', 'dumbbell']" /> TIME FIT
-            </a>
-
+            </router-link>
             <!-- Botón colapsable para pantallas pequeñas -->
             <button class="navbar-toggler" type="button" @click="toggleMenu" aria-controls="navbarNav"
               aria-expanded="false" aria-label="Toggle navigation">
@@ -39,12 +38,6 @@
                     <font-awesome-icon :icon="['fas', 'circle-info']" /> About us
                   </router-link>
                 </li>
-                <!-- Elemento de navegación: Contact -->
-                <li class="nav-item">
-                  <router-link to="/Contact" class="nav-link" @click="closeMenu">
-                    <font-awesome-icon :icon="['fas', 'envelope']" /> Contact
-                  </router-link>
-                </li>
                 <!-- Elemento de navegación: Pricing -->
                 <li class="nav-item">
                   <router-link to="/Pricing" class="nav-link" @click="closeMenu">
@@ -55,6 +48,12 @@
                 <li class="nav-item">
                   <router-link to="/Features" class="nav-link" @click="closeMenu">
                     <i class="bi bi-grid-1x2"></i> Features
+                  </router-link>
+                </li>
+                <!-- Elemento de navegación: Contact -->
+                <li class="nav-item">
+                  <router-link to="/Contact" class="nav-link" @click="closeMenu">
+                    <font-awesome-icon :icon="['fas', 'envelope']" /> Contact
                   </router-link>
                 </li>
                 <!-- Elemento de navegación: Sign In -->
@@ -127,7 +126,8 @@
               <h5>Follow us</h5>
               <div class="social-icons">
                 <!-- Íconos de redes sociales -->
-                <a href="https://www.facebook.com/share/1N51k39N97/?mibextid=LQQJ4d" class="social-icon" target="_blank">
+                <a href="https://www.facebook.com/share/1N51k39N97/?mibextid=LQQJ4d" class="social-icon"
+                  target="_blank">
                   <font-awesome-icon :icon="['fab', 'facebook']" />
                 </a>
                 <a href="https://x.com/timefit31" class="social-icon" target="_blank">
@@ -315,6 +315,11 @@ body footer {
   /* Espaciado entre letras */
 }
 
+.navbar-brand:hover{
+  color: #B1D690 !important;
+}
+
+
 /* Estilo para los enlaces de navegación */
 .nav-link {
   color: #ecf0f1 !important;
@@ -395,7 +400,7 @@ body footer {
 /* Estilos responsivos para pantallas pequeñas */
 @media (max-width: 991px) {
   .navbar-nav {
-    background-color: #272829;
+    background-color: transparent;
     /* Fondo degradado */
     padding: 20px;
     /* Relleno interno */
@@ -413,7 +418,7 @@ body footer {
   }
 
   .nav-link:hover {
-    color: #F8820B !important;
+    color: #B1D690 !important;
     /* Cambia el color del texto al pasar el cursor */
   }
 

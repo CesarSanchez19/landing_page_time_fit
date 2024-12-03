@@ -91,7 +91,7 @@
                 <!-- Segunda columna: Imagen -->
                 <div class="col-12 col-md-6">
                     <!-- Imagen ilustrativa para la página de registro -->
-                    <img :src="require('@/assets/Sujeto Sign UP.png')" alt="signin person" width="100%" height="auto">
+                    <img :src="require('@/assets/Sujeto Sign UP.png')" alt="signin person" width="100%" height="1015px">
                 </div>
             </div>
         </div>

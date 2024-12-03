@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-12 col-md-6">
                     <!-- Imagen ilustrativa para la página de registro -->
-                    <img :src="require('@/assets/sujeto login.png')" alt="login" width="100%" height="auto">
+                    <img :src="require('@/assets/sujeto login.png')" alt="login" width="100%" height="642px">
                 </div>
                 <!-- Primera columna: Formulario de registro -->
                 <div class="col-12 col-md-6">
