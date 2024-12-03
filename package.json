@@ -19,6 +19,7 @@
     "bootstrap-vue": "^2.23.1",
     "bootstrap-vue-3": "^0.5.1",
     "core-js": "^3.8.3",
+    "crypto-js": "^4.2.0",
     "firebase": "^11.0.2",
     "vercel": "^39.0.2",
     "vue": "^3.2.13",
