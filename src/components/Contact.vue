@@ -130,6 +130,7 @@ h1 {
     border-color: #F8820B; /* Color del borde igual al fondo */
     color: black; /* Color del texto negro para contraste */
     margin-bottom: 20px; /* Margen inferior de 20px para separación con otros elementos */
+    border: none;
 }
 
 /* Estilos para el botón principal cuando se pasa el cursor por encima */

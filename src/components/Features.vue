@@ -434,7 +434,9 @@
   display: block;
   width: fit-content;
   margin-bottom: 20px;
+  border: none; /* Elimina el borde */
 }
+
 
 .icon {
   width: 30px;

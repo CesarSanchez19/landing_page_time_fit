@@ -401,6 +401,7 @@
   margin-left: 22px;
   cursor: pointer;
   color: #fff;
+  border: none;
 
 }
 
@@ -415,6 +416,7 @@
   margin-left: 685px;
   cursor: pointer;
   color: #fff;
+  border: none;
 
 }
 
@@ -429,6 +431,7 @@
   margin-left: 60px;
   cursor: pointer;
   color: #fff;
+  border: none;
 
 }
 
