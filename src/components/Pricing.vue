@@ -19,11 +19,7 @@
 
     <div class="content">
       <div class="card">
-        <img
-          class="icon"
-          :src="require('@/assets/Customer_Support.svg')"
-          alt="Customer Support"
-        />
+        <img class="icon" :src="require('@/assets/Customer_Support.svg')" alt="Customer Support" />
         <div class="titlecard">Dedicated Customer Support</div>
         <div class="textcard">
           Our support team is available to assist you every step of the way,
@@ -34,11 +30,7 @@
         </div>
       </div>
       <div class="card">
-        <img
-          class="icon"
-          :src="require('@/assets/bar-chart-line-fill.svg')"
-          alt="Grafica"
-        />
+        <img class="icon" :src="require('@/assets/bar-chart-line-fill.svg')" alt="Grafica" />
         <div class="titlecard">Flexible Scalability</div>
         <div class="textcard">
           Time Fit grows with you. As your gym expands, you can easily upgrade
@@ -64,85 +56,45 @@
       <div class="rectangles">
         <div class="image-container">
           <div class="imagen-rec">
-            <img
-              class="imagenes-rec"
-              :src="require('@/assets/squat.png')"
-              alt="squat"
-            />
+            <img class="imagenes-rec" :src="require('@/assets/squat.png')" alt="squat" />
             <div class="text-imagen">Squats</div>
           </div>
           <div class="imagen-rec">
-            <img
-              class="imagenes-rec"
-              :src="require('@/assets/push.jpg')"
-              alt="push up"
-            />
+            <img class="imagenes-rec" :src="require('@/assets/push.jpg')" alt="push up" />
             <div class="text-imagen">Push-Ups</div>
           </div>
           <div class="imagen-rec">
-            <img
-              class="imagenes-rec"
-              :src="require('@/assets/pull_up.png')"
-              alt="pull up"
-            />
+            <img class="imagenes-rec" :src="require('@/assets/pull_up.png')" alt="pull up" />
             <div class="text-imagen">Pull-Ups</div>
           </div>
           <div class="imagen-rec">
-            <img
-              class="imagenes-rec"
-              :src="require('@/assets/burpees.png')"
-              alt="burpees"
-            />
+            <img class="imagenes-rec" :src="require('@/assets/burpees.png')" alt="burpees" />
             <div class="text-imagen">Burpees</div>
           </div>
           <div class="imagen-rec">
-            <img
-              class="imagenes-rec"
-              :src="require('@/assets/plank.png')"
-              alt="plank"
-            />
+            <img class="imagenes-rec" :src="require('@/assets/plank.png')" alt="plank" />
             <div class="text-imagen">Plank</div>
           </div>
         </div>
         <div class="image-container">
           <div class="imagen-rec">
-            <img
-              class="imagenes-rec"
-              :src="require('@/assets/lunges.png')"
-              alt="lunges"
-            />
+            <img class="imagenes-rec" :src="require('@/assets/lunges.png')" alt="lunges" />
             <div class="text-imagen">Lunges</div>
           </div>
           <div class="imagen-rec">
-            <img
-              class="imagenes-rec"
-              :src="require('@/assets/deadlift.png')"
-              alt="deadlift"
-            />
+            <img class="imagenes-rec" :src="require('@/assets/deadlift.png')" alt="deadlift" />
             <div class="text-imagen">Deadlift</div>
           </div>
           <div class="imagen-rec">
-            <img
-              class="imagenes-rec"
-              :src="require('@/assets/bicep.png')"
-              alt="bicep curl"
-            />
+            <img class="imagenes-rec" :src="require('@/assets/bicep.png')" alt="bicep curl" />
             <div class="text-imagen">Bicep Curls</div>
           </div>
           <div class="imagen-rec">
-            <img
-              class="imagenes-rec"
-              :src="require('@/assets/barbell.png')"
-              alt="barbell bicep curl"
-            />
+            <img class="imagenes-rec" :src="require('@/assets/barbell.png')" alt="barbell bicep curl" />
             <div class="text-imagen">Barbell Bicep Curl</div>
           </div>
           <div class="imagen-rec">
-            <img
-              class="imagenes-rec"
-              :src="require('@/assets/leg.png')"
-              alt="leg raise"
-            />
+            <img class="imagenes-rec" :src="require('@/assets/leg.png')" alt="leg raise" />
             <div class="text-imagen">Leg Raise</div>
           </div>
         </div>
@@ -157,9 +109,10 @@
       endurance, and muscle tone.
     </div>
 
-    <router-link to="/signin" class="center">
-      <button class="buttoncreate" >Join Now</button>
-    </router-link>  
+
+    <router-link to="/signin">
+      <button class="buttonjoin">Join Now</button>
+    </router-link>
 
     <div class="title3">Famous and Nutritious Recipes for Every Taste</div>
     <div class="recipe-section">
@@ -179,8 +132,8 @@
           well-being.
         </div>
 
-        <router-link to="/signin" class="button3">
-          <div >Join Now</div>  
+        <router-link to="/signin">
+          <button class="buttonjoinsecond">Join Now</button>
         </router-link>
 
         <!-- <div class="button3">Join Now</div> -->
@@ -190,10 +143,7 @@
       <div class="recipe-categories">
         <ul>
           <li>
-            <img
-              :src="require('@/assets/breakfast.png')"
-              alt="Breakfast"
-            />Breakfast
+            <img :src="require('@/assets/breakfast.png')" alt="Breakfast" />Breakfast
           </li>
           <li><img :src="require('@/assets/lunch.png')" alt="Lunch" />Lunch</li>
           <li>
@@ -201,10 +151,7 @@
           </li>
           <li><img :src="require('@/assets/snack.png')" alt="Snack" />Snack</li>
           <li>
-            <img
-              :src="require('@/assets/smoothies.png')"
-              alt="Smoothies"
-            />Smoothies
+            <img :src="require('@/assets/smoothies.png')" alt="Smoothies" />Smoothies
           </li>
         </ul>
       </div>
@@ -224,7 +171,7 @@
           Small gyms or individuals who need quick access to essential features.
         </p>
         <p class="price">$400.00 MXN / Month</p>
-        
+
         <router-link to="/signin"><button>Get Started Now</button></router-link>
 
         <div class="details">
@@ -402,7 +349,7 @@
   z-index: 1;
 }
 
-.body > * {
+.body>* {
   position: relative;
   z-index: 2;
 }
@@ -413,13 +360,16 @@
   color: white;
   font-size: 80px;
   font-family: "Poppins";
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   word-wrap: break-word;
-  position: relative; /* Posición relativa */
-  top: 20px; /* Ajusta hacia arriba */
+  position: relative;
+  /* Posición relativa */
+  top: 1px;
+  /* Ajusta hacia arriba */
   /* margin-top: 4em; */
-  margin: 0 auto; /* Centra horizontalmente */
+  margin: 0 auto;
+  /* Centra horizontalmente */
 }
 
 .text1 {
@@ -428,11 +378,12 @@
   width: 100%;
   color: white;
   font-size: 18px;
-  font-family: Outfit;
+  font-family: "Poppins";
   font-weight: 400;
   word-wrap: break-word;
+  margin-top: 26px;
   margin-bottom: 60px;
-  margin-left: 0;
+  margin-left: 15px;
   margin-right: auto;
   line-height: 1.6;
   white-space: normal;
@@ -447,8 +398,38 @@
   font-weight: 500;
   letter-spacing: 0.6px;
   font-size: 15px;
+  margin-left: 22px;
   cursor: pointer;
   color: #fff;
+
+}
+
+.buttonjoin {
+  background: linear-gradient(90deg, #ff4300 0%, #ff6400 100%);
+  padding: 8px 28px;
+  border-radius: 16px;
+  border-style: inherit;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  font-size: 18px;
+  margin-left: 685px;
+  cursor: pointer;
+  color: #fff;
+
+}
+
+.buttonjoinsecond {
+  background: linear-gradient(90deg, #ff4300 0%, #ff6400 100%);
+  padding: 8px 135px;
+  border-radius: 16px;
+  border-style: inherit;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  font-size: 18px;
+  margin-left: 60px;
+  cursor: pointer;
+  color: #fff;
+
 }
 
 .move {
@@ -491,6 +472,7 @@
   width: 20%;
   height: 20%;
   margin-top: 0px;
+  margin-bottom: 12px;
 }
 
 .titlecard {
@@ -499,7 +481,7 @@
   text-align: center;
   color: white;
   font-size: 20px;
-  font-family: Inter;
+  font-family: "Poppins";
   font-weight: 700;
   word-wrap: break-word;
   margin-bottom: 10px;
@@ -510,9 +492,9 @@
   height: auto;
   text-align: center;
   color: white;
-  font-size: 18px;
-  font-family: Inter;
-  font-weight: 400;
+  font-size: 14px;
+  font-family: "Poppins";
+  font-weight: 300;
   word-wrap: break-word;
 }
 
@@ -521,18 +503,18 @@
   height: 100%;
   color: #ff6400;
   font-size: 36px;
-  font-family: Outfit;
+  font-family: "Poppins";
   font-weight: 700;
   word-wrap: break-word;
   margin-bottom: 25px;
-  margin-left: auto;
+  margin-left: 25px;
 }
 
 .rectangles {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  margin-bottom: 30px;
+  gap: 45px;
+  margin-bottom: 35px;
 }
 
 .image-container {
@@ -567,7 +549,7 @@
   position: absolute;
   color: white;
   font-size: 1.5rem;
-  font-family: Inter, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   text-align: center;
 }
@@ -578,12 +560,12 @@
   text-align: center;
   color: white;
   font-size: 20px;
-  font-family: Inter;
+  font-family: "Poppins";
   font-weight: 400;
   line-height: 33px;
   word-wrap: break-word;
   margin-left: 10%;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .button2 {
@@ -605,7 +587,8 @@
   display: flex;
   justify-content: space-between;
   /* align-items: flex-start; */
-  gap: 20px; /* Espacio entre las secciones */
+  gap: 20px;
+  /* Espacio entre las secciones */
   padding: 20px;
   margin-bottom: 40px;
 }
@@ -627,22 +610,24 @@
   flex: 1.5;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Espacio entre los elementos internos */
+  gap: 20px;
+  /* Espacio entre los elementos internos */
 }
 
 .title3 {
+  margin-top: 35px;
   color: #ff6400;
   font-size: 36px;
-  font-family: Outfit, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  margin-left: 100px;
+  margin-left: 25px;
 }
 
 .foodtext {
   color: white;
   width: 60%;
   font-size: 18px;
-  font-family: Outfit, sans-serif;
+  font-family: "Poppins", sans-serif;
   word-wrap: break-word;
   margin-left: 60px;
   margin-bottom: 20px;
@@ -655,13 +640,12 @@
   text-align: center;
   color: white;
   font-size: 20px;
-  font-family: Outfit, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   cursor: pointer;
   margin-left: 60px;
   margin-right: 180px;
   margin-bottom: 20px;
-
   background: linear-gradient(90deg, #ff4300 0%, #ff6400 100%);
   padding: 8px 28px;
   border-radius: 16px;
@@ -683,7 +667,7 @@
   width: 100%;
   color: white;
   font-size: 24px;
-  font-family: Inter;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   word-wrap: break-word;
   margin-left: 0px;
@@ -702,7 +686,7 @@
   text-align: center;
   color: #ff4300;
   font-size: 48px;
-  font-family: Inter;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   line-height: 57.6px;
   word-wrap: break-word;
@@ -712,7 +696,7 @@
 .textplan {
   color: white;
   font-size: 22px;
-  font-family: Inter;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   line-height: 26.4px;
   word-wrap: break-word;
@@ -815,6 +799,7 @@
   .title {
     font-size: 50px;
     margin-top: -150px;
+    margin-left: 14px;
   }
 
   .text1 {
@@ -913,6 +898,15 @@
   .master-plan {
     width: 100%;
   }
+  .buttonjoinsecond{
+    margin-left: 26px;
+    padding: 8px 24px;
+    margin-bottom: 50px;
+  }
+  .buttonjoin{
+    margin-left: 130px;
+    margin-bottom: 50px;
+  }
 }
 
 /* Pantallas medianas (tabletas) */
@@ -920,6 +914,7 @@
   .title {
     font-size: 70px;
     margin-top: -250px;
+    margin-left: 14px;
   }
 
   .text1 {
@@ -931,6 +926,16 @@
   .buttoncreate {
     font-size: 18px;
     padding: 8px 18px;
+  }
+
+  .buttonjoin {
+    margin-left: 40%;
+  }
+  
+  .buttonjoinsecond{
+    font-size: 18px;
+    padding: 8px 40px;
+    margin-left: 50px;
   }
 
   .content {
@@ -983,28 +988,43 @@
 @media (min-width: 1024px) {
   .title {
     font-size: 90px;
-    margin-top: -300px;
+    margin-top: 1px;
   }
 
   .text1 {
     font-size: 18px;
     max-width: 600px;
-    margin-bottom: 80px;
+    margin-top: 30px;
+    margin-bottom: 40px;
   }
 
   .buttoncreate {
     font-size: 20px;
     padding: 10px 20px;
   }
+  .titlecard {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .buttonjoin {
+    margin-left: 45%;
+  }
+  
+  .buttonjoinsecond{
+    font-size: 18px;
+    padding: 8px 135px;
+    margin-left: 60px;
+  }
 
   .content {
     height: 35vh;
     flex-direction: row;
+    margin-top: 130px;
   }
 
   .card {
-    width: 24%;
-    height: 40vh;
+    width: 45%;
+    height: 45vh;
   }
 
   .title2 {
