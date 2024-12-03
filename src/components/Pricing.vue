@@ -11,7 +11,10 @@
           your gym to the next level:
         </p>
       </div>
-      <button class="buttoncreate">Create Account</button>
+
+      <router-link to="signin" class="move">
+        <button class="buttoncreate">Create Account</button>
+      </router-link>
     </div>
 
     <div class="content">
@@ -153,7 +156,10 @@
       deadlifts and pull-ups, our program is designed to build strength,
       endurance, and muscle tone.
     </div>
-    <div class="button2">Join Now</div>
+
+    <router-link to="/signin" class="center">
+      <button class="buttoncreate" >Join Now</button>
+    </router-link>  
 
     <div class="title3">Famous and Nutritious Recipes for Every Taste</div>
     <div class="recipe-section">
@@ -172,7 +178,12 @@
           are tailored to complement your workouts and improve your overall
           well-being.
         </div>
-        <div class="button3">Join Now</div>
+
+        <router-link to="/signin" class="button3">
+          <div >Join Now</div>  
+        </router-link>
+
+        <!-- <div class="button3">Join Now</div> -->
       </div>
 
       <!-- Categorías -->
@@ -213,7 +224,9 @@
           Small gyms or individuals who need quick access to essential features.
         </p>
         <p class="price">$400.00 MXN / Month</p>
-        <button>Get Started Now</button>
+        
+        <router-link to="/signin"><button>Get Started Now</button></router-link>
+
         <div class="details">
           <h3>For Users:</h3>
           <ul>
@@ -246,7 +259,7 @@
           Medium-sized gyms that need advanced features and more flexibility.
         </p>
         <p class="price">$600.00 MXN / Month</p>
-        <button>Get Started Now</button>
+        <router-link to="/signin"><button>Get Started Now</button></router-link>
         <div class="details">
           <h3>For Users:</h3>
           <ul>
@@ -296,7 +309,7 @@
         <h2>Master Plan</h2>
         <p>Large gyms or fitness chains that need comprehensive tools.</p>
         <p class="price">$800.00 MXN / Month</p>
-        <button>Get Started Now</button>
+        <router-link to="/signin"><button>Get Started Now</button></router-link>
         <div class="details">
           <h3>For Users:</h3>
           <ul>
@@ -375,7 +388,7 @@
   align-items: center;
   padding: 20px;
   position: relative;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 .body::before {
@@ -389,18 +402,17 @@
   z-index: 1;
 }
 
-.body>* {
+.body > * {
   position: relative;
   z-index: 2;
 }
-
 
 .title {
   display: flex;
   width: 100%;
   color: white;
   font-size: 80px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 700;
   text-transform: uppercase;
   word-wrap: break-word;
@@ -428,19 +440,25 @@
 }
 
 .buttoncreate {
-  display: flex;
-  width: auto;
-  height: auto;
-  padding: 10px 20px;
   background: linear-gradient(90deg, #ff4300 0%, #ff6400 100%);
-  border-radius: 20px;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  font-family: Outfit, sans-serif;
-  font-weight: 600;
+  padding: 8px 28px;
+  border-radius: 16px;
+  border-style: inherit;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  font-size: 15px;
   cursor: pointer;
+  color: #fff;
+}
+
+.move {
   margin-right: auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
@@ -570,19 +588,17 @@
 
 .button2 {
   display: inline-block;
-  padding: 10px 20px;
-  background: linear-gradient(90deg, #ff4300 0%, #ff6400 100%);
-  border-radius: 20px;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  font-family: Outfit, sans-serif;
-  font-weight: 600;
-  cursor: pointer;
   margin: 0 auto;
   display: block;
-  width: fit-content;
-  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff4300 0%, #ff6400 100%);
+  padding: 8px 28px;
+  border-radius: 16px;
+  border-style: inherit;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
 }
 
 .recipe-section {
@@ -636,9 +652,6 @@
   display: inline-block;
   width: auto;
   height: auto;
-  padding: 10px 20px;
-  background: linear-gradient(90deg, #ff4300 0%, #ff6400 100%);
-  border-radius: 20px;
   text-align: center;
   color: white;
   font-size: 20px;
@@ -648,6 +661,13 @@
   margin-left: 60px;
   margin-right: 180px;
   margin-bottom: 20px;
+
+  background: linear-gradient(90deg, #ff4300 0%, #ff6400 100%);
+  padding: 8px 28px;
+  border-radius: 16px;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  color: #fff;
 }
 
 .recipe-categories {
@@ -841,12 +861,12 @@
     text-align: center;
   }
 
-  .recipe-section{
+  .recipe-section {
     flex-direction: column;
     gap: 20px;
   }
 
-  .recipe-image{
+  .recipe-image {
     flex: 1 1 100%;
     margin-bottom: 20px;
   }
