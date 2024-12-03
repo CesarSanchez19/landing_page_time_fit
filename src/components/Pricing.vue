@@ -510,7 +510,8 @@
   font-weight: 700;
   word-wrap: break-word;
   margin-bottom: 25px;
-  margin-left: 25px;
+  text-align: center;
+  /* margin-left: 25px; */
 }
 
 .rectangles {
