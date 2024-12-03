@@ -44,13 +44,33 @@
             </div>
         </div>
 
-        <!--? Vision content-->
+        <!--? Mission content-->
         <div class="info-txt-img-contnt info-txt-img-contnt-2 revers-row">
 
-            <img class="info-img-2" src="../assets/img-aboutUs/img-vision-about-2.png" 
+            <img class="info-img-2" src="../assets/img-aboutUs/img-mission-about-3.png" 
             alt="Trainer talking to a client">
 
             <div class="info-txt-contnt info-txt-contnt-2">
+                <h2>Mission</h2>
+                    <p>At Time Fit, our mission is to revolutionize gym management
+                    and user experience through an accessible, intuitive, and 
+                    personalized platform. We believe in the importance of 
+                    simplifying daily gym operations, allowing administrators
+                    to manage their activities efficiently and effortlessly. 
+                    At the same time, we aim to provide each user with a unique 
+                    experience, with personalized tools that adapt to their 
+                    individual goals, motivating them to reach their fitness
+                    objectives.</p>
+            </div>
+        </div>
+
+        <!--? Vision content -->
+        <div class="info-txt-img-contnt info-txt-img-contnt-3">
+
+            <img class="info-img-3" src="../assets/img-aboutUs/img-vision-about-2.png" 
+            alt="People in the Gym">
+
+            <div class="info-txt-contnt info-txt-contnt-3">
                 <h2>Vision</h2>
                 <p>At Time Fit, our vision is to revolutionize the fitness 
                     industry through advanced technology and personalization.
@@ -61,26 +81,6 @@
                     and users have instant access to relevant information, 
                     personalized routines, and performance metrics—all in a
                     single platform. </p>
-            </div>
-        </div>
-
-        <!--? Mission content -->
-        <div class="info-txt-img-contnt info-txt-img-contnt-3">
-
-            <img class="info-img-3" src="../assets/img-aboutUs/img-mission-about-3.png" 
-            alt="People in the Gym">
-
-            <div class="info-txt-contnt info-txt-contnt-3">
-                <h2>Mission</h2>
-                <p>At Time Fit, our mission is to revolutionize gym management
-                    and user experience through an accessible, intuitive, and 
-                    personalized platform. We believe in the importance of 
-                    simplifying daily gym operations, allowing administrators
-                    to manage their activities efficiently and effortlessly. 
-                    At the same time, we aim to provide each user with a unique 
-                    experience, with personalized tools that adapt to their 
-                    individual goals, motivating them to reach their fitness
-                    objectives.</p>
             </div>
         </div>
 
