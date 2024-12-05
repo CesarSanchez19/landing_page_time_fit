@@ -126,7 +126,7 @@
               <h5>Follow us</h5>
               <div class="social-icons">
                 <!-- Íconos de redes sociales -->
-                <a href="https://www.facebook.com/share/1N51k39N97/?mibextid=LQQJ4d" class="social-icon"
+                <a href="https://www.facebook.com/share/jzzyVZB7yX5Y89pT/" class="social-icon"
                   target="_blank">
                   <font-awesome-icon :icon="['fab', 'facebook']" />
                 </a>
