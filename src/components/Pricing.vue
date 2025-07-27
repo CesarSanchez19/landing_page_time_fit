@@ -12,9 +12,13 @@
         </p>
       </div>
 
-      <router-link to="signin" class="move">
+      <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" class="move" target="_blank" rel="noopener">
         <button class="buttoncreate">Create Account</button>
-      </router-link>
+      </a>
+
+      <!-- <router-link to="signin" class="move">
+        <button class="buttoncreate">Create Account</button>
+      </router-link> -->
     </div>
 
     <div class="content">
@@ -109,10 +113,13 @@
       endurance, and muscle tone.
     </div>
 
-
-    <router-link to="/signin">
+    <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">
       <button class="buttonjoin">Join Now</button>
-    </router-link>
+    </a>
+
+    <!-- <router-link to="/signin">
+      <button class="buttonjoin">Join Now</button>
+    </router-link> -->
 
     <div class="title3">Famous and Nutritious Recipes for Every Taste</div>
     <div class="recipe-section">
@@ -132,9 +139,13 @@
           well-being.
         </div>
 
-        <router-link to="/signin">
+        <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">
           <button class="buttonjoinsecond">Join Now</button>
-        </router-link>
+        </a>
+
+        <!-- <router-link to="/signin">
+          <button class="buttonjoinsecond">Join Now</button>
+        </router-link> -->
 
         <!-- <div class="button3">Join Now</div> -->
       </div>
@@ -172,7 +183,10 @@
         </p>
         <p class="price">$400.00 MXN / Month</p>
 
-        <router-link to="/signin"><button>Get Started Now</button></router-link>
+        <!-- <router-link to="/signin"><button>Get Started Now</button></router-link> -->
+        <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">
+          <button>Get Started Now</button>
+        </a>
 
         <div class="details">
           <h3>For Users:</h3>
@@ -206,7 +220,12 @@
           Medium-sized gyms that need advanced features and more flexibility.
         </p>
         <p class="price">$600.00 MXN / Month</p>
-        <router-link to="/signin"><button>Get Started Now</button></router-link>
+
+        <!-- <router-link to="/signin"><button>Get Started Now</button></router-link> -->
+        <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">
+          <button>Get Started Now</button>
+        </a>
+
         <div class="details">
           <h3>For Users:</h3>
           <ul>
@@ -256,7 +275,12 @@
         <h2>Master Plan</h2>
         <p>Large gyms or fitness chains that need comprehensive tools.</p>
         <p class="price">$800.00 MXN / Month</p>
-        <router-link to="/signin"><button>Get Started Now</button></router-link>
+
+        <!-- <router-link to="/signin"><button>Get Started Now</button></router-link> -->
+        <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">
+          <button>Get Started Now</button>
+        </a>
+
         <div class="details">
           <h3>For Users:</h3>
           <ul>

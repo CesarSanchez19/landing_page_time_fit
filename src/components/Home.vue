@@ -237,11 +237,16 @@
             <div class="text-bttn-final-content">
                 <h2>Transform your gym experience with innovative</h2>
                 <p>Join Time Fit and take your training to the next level.</p>
-    
-                <!-- There is a conection to "Log in" section of landing -->
-                <router-link to="/Login">
+                
+                <!-- Button for redirection to "Sign up" to Time Fit / Admin-->
+                <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">
                     <button class="bttn-red-more-3 bttn-final-content">Join now</button>
-                </router-link>
+                </a>
+
+                <!-- There is a conection to "Log in" section of landing -->
+                <!-- <router-link to="/Login">
+                    <button class="bttn-red-more-3 bttn-final-content">Join now</button>
+                </router-link> -->
             </div>
 
         </section>
