@@ -98,6 +98,17 @@
             <article>
                 
                 <figure>
+                    <img src="../assets/img-aboutUs/Tadeo-foto-card.png" alt="Diego Balbuena picture">
+                </figure>
+                <div class="txt-team-membs-contnt txt-team-membs-diego">
+                    <p class="txt-team-membs-name">Aviles Perez Jorge Tadeo</p>
+                    <p class="txt-team-membs-rol">UX/UI Designer</p>
+                </div>
+                
+            </article>
+            <article>
+                
+                <figure>
                     <img src="../assets/img-aboutUs/Diego-foto-card.jpg" alt="Diego Balbuena picture">
                 </figure>
                 <div class="txt-team-membs-contnt txt-team-membs-diego">
@@ -155,6 +166,17 @@
                 <div class="txt-team-membs-contnt txt-team-membs-aaron">
                     <p class="txt-team-membs-name">Santos Absalón Aarón de Jesús</p>
                     <p class="txt-team-membs-rol">UX/UI Designer</p>
+                </div>
+
+            </article>
+            <article>
+
+                <figure>
+                    <img src="../assets/img-aboutUs/Ivan-foto-card.jpg" alt="Ivan Tamay picture">
+                </figure>
+                <div class="txt-team-membs-contnt txt-team-membs-aaron">
+                    <p class="txt-team-membs-name">Tamay Balam Jesús Ivan</p>
+                    <p class="txt-team-membs-rol">Full Stack Developer</p>
                 </div>
 
             </article>

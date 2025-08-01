@@ -11,14 +11,6 @@
           your gym to the next level:
         </p>
       </div>
-
-      <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" class="move" target="_blank" rel="noopener">
-        <button class="buttoncreate">Create Account</button>
-      </a>
-
-      <!-- <router-link to="signin" class="move">
-        <button class="buttoncreate">Create Account</button>
-      </router-link> -->
     </div>
 
     <div class="content">
@@ -113,14 +105,6 @@
       endurance, and muscle tone.
     </div>
 
-    <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">
-      <button class="buttonjoin">Join Now</button>
-    </a>
-
-    <!-- <router-link to="/signin">
-      <button class="buttonjoin">Join Now</button>
-    </router-link> -->
-
     <div class="title3">Famous and Nutritious Recipes for Every Taste</div>
     <div class="recipe-section">
       <!-- Imagen -->
@@ -138,16 +122,6 @@
           are tailored to complement your workouts and improve your overall
           well-being.
         </div>
-
-        <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">
-          <button class="buttonjoinsecond">Join Now</button>
-        </a>
-
-        <!-- <router-link to="/signin">
-          <button class="buttonjoinsecond">Join Now</button>
-        </router-link> -->
-
-        <!-- <div class="button3">Join Now</div> -->
       </div>
 
       <!-- Categorías -->
@@ -168,169 +142,190 @@
       </div>
     </div>
 
-    <div class="title4">Find the Perfect Plan for Your Gym</div>
-    <div class="textplan">
-      Choose the plan that best suits your gym’s needs and start transforming
-      your users' experience with Time Fit.
-    </div>
-
-    <!--planes-->
-    <div class="plans-container">
-      <div class="plan basic-plan">
-        <h2>Basic Plan</h2>
-        <p>
-          Small gyms or individuals who need quick access to essential features.
-        </p>
-        <p class="price">$400.00 MXN / Month</p>
-
-        <!-- <router-link to="/signin"><button>Get Started Now</button></router-link> -->
-        <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">
-          <button>Get Started Now</button>
-        </a>
-
-        <div class="details">
-          <h3>For Users:</h3>
-          <ul>
-            <li>
-              Access to a library of over 20,000 PNG and SVG graphics to
-              personalize workout plans.
-            </li>
-            <li>Basic workout tracking and progress monitoring.</li>
-            <li>Limited access to training plans and resources.</li>
-          </ul>
-          <h3>For Administrators:</h3>
-          <ul>
-            <li>Basic membership management tools.</li>
-            <li>Access to customer data and limited analytics.</li>
-            <li>No custom branding options.</li>
-            <li>Limited storage for member records and gym data.</li>
-          </ul>
-          <h3>Limitations:</h3>
-          <ul>
-            <li>Does not support unlimited sharing of resources.</li>
-            <li>No ability to create teams for collaborative work.</li>
-            <li>No integration with advanced fitness devices or analytics.</li>
-          </ul>
-        </div>
+    <!-- Sección de Planes Integrada -->
+    <div class="pricing-section">
+      <div class="title4">Find the Perfect Plan for Your Gym</div>
+      <div class="textplan">
+        Choose the plan that best suits your gym's needs and start transforming
+        your users' experience with Time Fit.
       </div>
 
-      <div class="plan professional-plan">
-        <h2>Professional Plan</h2>
-        <p>
-          Medium-sized gyms that need advanced features and more flexibility.
-        </p>
-        <p class="price">$600.00 MXN / Month</p>
-
-        <!-- <router-link to="/signin"><button>Get Started Now</button></router-link> -->
-        <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">
-          <button>Get Started Now</button>
-        </a>
-
-        <div class="details">
-          <h3>For Users:</h3>
-          <ul>
-            <li>
-              Access to a vast library of 100 million stock images for creating
-              personalized workout and nutrition plans.
-            </li>
-            <li>
-              Customizable fitness plans with tracking capabilities for
-              individual goals.
-            </li>
-            <li>
-              Access to a community forum to engage with other gym members and
-              share achievements.
-            </li>
-            <li>
-              Upload and share progress pictures and videos in up to 4K quality.
-            </li>
-          </ul>
-          <h3>For Administrators:</h3>
-          <ul>
-            <li>
-              Advanced membership management tools, including billing and
-              attendance tracking.
-            </li>
-            <li>Custom branding options to align with the gym's image.</li>
-            <li>
-              Unlimited project management for developing new classes and member
-              programs.
-            </li>
-            <li>
-              Access to detailed analytics to track member progress and gym
-              performance.
-            </li>
-          </ul>
-          <h3>Limitations:</h3>
-          <ul>
-            <li>
-              Does not allow team creation for design and project collaboration.
-            </li>
-            <li>Limited integration with external CRM and marketing tools.</li>
-          </ul>
+      <!-- Period Toggle Button -->
+      <div class="period-toggle">
+        <span :class="{ active: !isAnnual }" class="period-label">Monthly</span>
+        <div class="toggle-switch" @click="togglePeriod">
+          <div class="toggle-slider" :class="{ annual: isAnnual }"></div>
         </div>
+        <span :class="{ active: isAnnual }" class="period-label">
+          Annual 
+          <span class="discount-badge">Save 20%</span>
+        </span>
       </div>
 
-      <div class="plan master-plan">
-        <h2>Master Plan</h2>
-        <p>Large gyms or fitness chains that need comprehensive tools.</p>
-        <p class="price">$800.00 MXN / Month</p>
+      <!-- Plans Grid -->
+      <div class="plans-grid">
+        <!-- Basic Plan -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3 class="plan-name">BASIC PLAN</h3>
+            <p class="plan-description">Perfect for fitness entrepreneurs.</p>
+            <div class="price-section">
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">{{ isAnnual ? '5,400' : '500' }}</span>
+                <span class="period">MXN/{{ isAnnual ? 'annual' : 'month' }}</span>
+              </div>
+              <div v-if="isAnnual" class="savings">Save $600 MXN</div>
+            </div>
+          </div>
+          
+          <div class="features-section">
+            <h4 class="features-title">What's included?</h4>
+            <ul class="features-list">
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Client management (up to 100 records)
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Membership creation (up to 3 types)
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Personalized user profile
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Important gym notes
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Basic gym registration
+              </li>
+            </ul>
+          </div>
+        </div>
 
-        <!-- <router-link to="/signin"><button>Get Started Now</button></router-link> -->
-        <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">
-          <button>Get Started Now</button>
-        </a>
+        <!-- Professional Plan -->
+        <div class="plan-card featured">
+          <div class="popular-badge">Most Popular</div>
+          <div class="plan-header">
+            <h3 class="plan-name">PROFESSIONAL PLAN</h3>
+            <p class="plan-description">Ideal for established gyms.</p>
+            <div class="price-section">
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">{{ isAnnual ? '7,200' : '700' }}</span>
+                <span class="period">MXN/{{ isAnnual ? 'annual' : 'month' }}</span>
+              </div>
+              <div v-if="isAnnual" class="savings">Save $1,200 MXN</div>
+            </div>
+          </div>
+          
+          <div class="features-section">
+            <h4 class="features-title">What's included?</h4>
+            <ul class="features-list">
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Complete Home dashboard with widgets
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Unlimited clients with complete history
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Customizable unlimited memberships
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Staff registration (up to 5)
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Smart reminder calendar
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Basic income reports
+              </li>
+            </ul>
+          </div>
+        </div>
 
-        <div class="details">
-          <h3>For Users:</h3>
-          <ul>
-            <li>
-              Full access to all exercise and nutrition resources, including
-              high-protein, low-carb, dairy-free, and vegetarian recipe
-              collections.
-            </li>
-            <li>
-              Advanced progress tracking with integration to fitness devices
-              (e.g., heart rate monitors).
-            </li>
-            <li>
-              Ability to connect and compare progress with other users in real
-              time.
-            </li>
-          </ul>
-          <h3>For Administrators:</h3>
-          <ul>
-            <li>
-              Complete membership and financial management suite with advanced
-              reporting tools.
-            </li>
-            <li>
-              Team collaboration features to work with trainers, nutritionists,
-              and marketing staff.
-            </li>
-            <li>Limited storage for member records and gym data.</li>
-            <li>
-              Data insights on user behavior and retention statistics to guide
-              business.
-            </li>
-          </ul>
-          <h3>Benefits:</h3>
-          <ul>
-            <li>Unlimited sharing of resources and multimedia content.</li>
-            <li>
-              Instant access to updates and new features without additional
-              fees.
-            </li>
-            <li>
-              Priority customer support with a dedicated account manager for
-              seamless operations.
-            </li>
-          </ul>
+        <!-- Master Plan -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3 class="plan-name">MASTER PLAN</h3>
+            <p class="plan-description">For gyms with accelerated growth.</p>
+            <div class="price-section">
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">{{ isAnnual ? '9,000' : '900' }}</span>
+                <span class="period">MXN/{{ isAnnual ? 'annual' : 'month' }}</span>
+              </div>
+              <div v-if="isAnnual" class="savings">Save $1,800 MXN</div>
+            </div>
+          </div>
+          
+          <div class="features-section">
+            <h4 class="features-title">What's included?</h4>
+            <ul class="features-list">
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Complete financial analysis with charts
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Total inventory + suppliers control
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Detailed period reports
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Advanced product and sales management
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Customizable time filters
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Full web app access with all functions
+              </li>
+              <li class="feature-item">
+                <i class="check-icon">✓</i>
+                Unlimited staff with schedules
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script>
+import { ref } from 'vue'
+
+export default {
+  name: 'SubscriptionPlans',
+  setup() {
+    const isAnnual = ref(false)
+
+    const togglePeriod = () => {
+      isAnnual.value = !isAnnual.value
+    }
+
+    return {
+      isAnnual,
+      togglePeriod
+    }
+  }
+}
+</script>
 
 <style scoped>
 :root {
@@ -388,12 +383,8 @@
   text-transform: uppercase;
   word-wrap: break-word;
   position: relative;
-  /* Posición relativa */
   top: 1px;
-  /* Ajusta hacia arriba */
-  /* margin-top: 4em; */
   margin: 0 auto;
-  /* Centra horizontalmente */
 }
 
 .text1 {
@@ -412,61 +403,6 @@
   line-height: 1.6;
   white-space: normal;
   text-align: left;
-}
-
-.buttoncreate {
-  background: linear-gradient(90deg, #ff4300 0%, #ff6400 100%);
-  padding: 8px 28px;
-  border-radius: 16px;
-  border-style: inherit;
-  font-weight: 500;
-  letter-spacing: 0.6px;
-  font-size: 15px;
-  margin-left: 22px;
-  cursor: pointer;
-  color: #fff;
-  border: none;
-
-}
-
-.buttonjoin {
-  background: linear-gradient(90deg, #ff4300 0%, #ff6400 100%);
-  padding: 8px 28px;
-  border-radius: 16px;
-  border-style: inherit;
-  font-weight: 600;
-  letter-spacing: 0.6px;
-  font-size: 18px;
-  margin-left: 685px;
-  cursor: pointer;
-  color: #fff;
-  border: none;
-
-}
-
-.buttonjoinsecond {
-  background: linear-gradient(90deg, #ff4300 0%, #ff6400 100%);
-  padding: 8px 135px;
-  border-radius: 16px;
-  border-style: inherit;
-  font-weight: 600;
-  letter-spacing: 0.6px;
-  font-size: 18px;
-  margin-left: 60px;
-  cursor: pointer;
-  color: #fff;
-  border: none;
-
-}
-
-.move {
-  margin-right: auto;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .content {
@@ -535,7 +471,6 @@
   word-wrap: break-word;
   margin-bottom: 25px;
   text-align: center;
-  /* margin-left: 25px; */
 }
 
 .rectangles {
@@ -596,27 +531,10 @@
   margin-bottom: 35px;
 }
 
-.button2 {
-  display: inline-block;
-  margin: 0 auto;
-  display: block;
-  background: linear-gradient(90deg, #ff4300 0%, #ff6400 100%);
-  padding: 8px 28px;
-  border-radius: 16px;
-  border-style: inherit;
-  font-weight: 500;
-  letter-spacing: 0.6px;
-  font-size: 15px;
-  cursor: pointer;
-  color: #fff;
-}
-
 .recipe-section {
   display: flex;
   justify-content: space-between;
-  /* align-items: flex-start; */
   gap: 20px;
-  /* Espacio entre las secciones */
   padding: 20px;
   margin-bottom: 40px;
 }
@@ -639,7 +557,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* Espacio entre los elementos internos */
 }
 
 .title3 {
@@ -659,27 +576,6 @@
   word-wrap: break-word;
   margin-left: 60px;
   margin-bottom: 20px;
-}
-
-.button3 {
-  display: inline-block;
-  width: auto;
-  height: auto;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  cursor: pointer;
-  margin-left: 60px;
-  margin-right: 180px;
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, #ff4300 0%, #ff6400 100%);
-  padding: 8px 28px;
-  border-radius: 16px;
-  letter-spacing: 0.6px;
-  cursor: pointer;
-  color: #fff;
 }
 
 .recipe-categories {
@@ -709,6 +605,14 @@
   border-radius: 10%;
 }
 
+/* Sección de Precios - INTEGRADA CON EL DISEÑO EXISTENTE */
+.pricing-section {
+  background-color: #272829;
+  width: 100%;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
 .title4 {
   width: 100%;
   text-align: center;
@@ -730,366 +634,318 @@
   word-wrap: break-word;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
-/*planes */
-.plans-container {
+.period-toggle {
   display: flex;
-  justify-content: space-around;
-  padding: 100px;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 auto 3rem auto;
+  width: fit-content;
 }
 
-.plan {
-  width: 300px;
-  background-color: #2c2c2c;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.period-label {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.period-label.active {
+  color: white;
+}
+
+.discount-badge {
+  background: #ff6400;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.toggle-switch {
+  width: 60px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-slider {
+  width: 26px;
+  height: 26px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.toggle-slider.annual {
+  transform: translateX(30px);
+  background: #ff6400;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.plan-card {
+  background: #3b3b3b;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.plan-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6400, #ff4300);
+}
+
+.plan-card.featured {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  background: linear-gradient(135deg, #c25208, #da4711);
+  border: 2px solid #ff6400;
+}
+
+.plan-card.featured::before {
+  height: 6px;
+  background: linear-gradient(90deg, #fff, #f8f8f8);
+}
+
+.plan-card.featured .plan-name,
+.plan-card.featured .plan-description,
+.plan-card.featured .features-title,
+.plan-card.featured .feature-item {
+  color: white;
+}
+
+.plan-card.featured .currency,
+.plan-card.featured .amount {
+  color: white;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.plan-card.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: #272829;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.plan-header {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.plan:hover {
-  background-color: #e9762a;
-}
-
-.plan h2 {
-  font-size: 24px;
+.plan-name {
+  font-size: 1.5rem;
+  font-weight: 800;
   color: white;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
 }
 
-.plan p {
-  font-size: 16px;
-  margin: 10px 0;
+.plan-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.price-section {
+  margin-bottom: 1rem;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff6400;
+}
+
+.amount {
+  font-size: 3rem;
+  font-weight: 900;
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 
-.plan .price {
-  font-size: 20px;
+.period {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.savings {
+  color: #4ade80;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  background: rgba(74, 222, 128, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+}
+
+.features-section {
+  margin-bottom: 2rem;
+}
+
+.features-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+.check-icon {
+  color: #4ade80;
   font-weight: bold;
-  margin: 10px 0;
+  font-size: 1rem;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background: rgba(74, 222, 128, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.1rem;
 }
 
-.plan button {
-  background-color: #fa4f06;
+.select-plan-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #ff6400, #ff4300);
   color: white;
   border: none;
-  padding: 10px 57px;
-  border-radius: 5px;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   cursor: pointer;
-  font-size: 16px;
-  margin: 10px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 100, 0, 0.3);
+  font-family: "Poppins", sans-serif;
 }
 
-.plan button:hover {
-  background-color: #45474b;
+.select-plan-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 100, 0, 0.4);
+  background: linear-gradient(135deg, #ff4300, #ff6400);
 }
 
-.details h3 {
-  text-align: left;
-  font-size: 18px;
-  color: white;
-  margin-top: 15px;
+.plan-card.featured .select-plan-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
-.details ul {
-  text-align: left;
-  margin: 10px 0 0 20px;
-  color: white;
+.plan-card.featured .select-plan-btn:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
 }
 
-.details ul li {
-  margin: 5px 0;
-}
-
-.basic-plan {
-  background-color: #45474b;
-  width: 28%;
-}
-
-.professional-plan {
-  background-color: #45474b;
-  width: 28%;
-}
-
-.master-plan {
-  background-color: #45474b;
-  width: 28%;
-}
-
-/* Pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
-  .body {
-    padding: 15px;
-  }
-
-  .title {
-    font-size: 50px;
-    margin-top: -150px;
-    margin-left: 14px;
-  }
-
-  .text1 {
-    font-size: 16px;
-    max-width: 100%;
-    margin-bottom: 40px;
-  }
-
-  .buttoncreate {
-    font-size: 18px;
-    padding: 8px 15px;
-  }
-
-  .content {
-    flex-direction: column;
-    height: auto;
-    padding: 15px;
-  }
-
-  .card {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  .title2 {
-    font-size: 30px;
-    margin-left: auto;
-  }
-
-  .image-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .imagen-rec {
-    width: 80%;
-    height: 300px;
-  }
-
-  .title3 {
-    margin-left: 0;
-    margin-right: 0;
-    text-align: center;
-  }
-
-  .recipe-section {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .recipe-image {
-    flex: 1 1 100%;
-    margin-bottom: 20px;
-  }
-
-  .foodimagen {
-    max-width: 300px;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .recipe-description {
-    flex: 1 1 100%;
-    text-align: center;
-  }
-
-  .foodtext {
-    width: 80%;
-    font-size: 16px;
-    margin-left: 10%;
-  }
-
-  .button3 {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .recipe-categories ul li {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-
-  .plans-container {
-    flex-direction: column;
-    padding: 40px 20px;
-  }
-
-  .plan {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .basic-plan,
-  .professional-plan,
-  .master-plan {
-    width: 100%;
-  }
-  .buttonjoinsecond{
-    margin-left: 26px;
-    padding: 8px 24px;
-    margin-bottom: 50px;
-  }
-  .buttonjoin{
-    margin-left: 130px;
-    margin-bottom: 50px;
-  }
-}
-
-/* Pantallas medianas (tabletas) */
-@media (min-width: 769px) and (max-width: 1023px) {
-  .title {
-    font-size: 70px;
-    margin-top: -250px;
-    margin-left: 14px;
-  }
-
-  .text1 {
-    font-size: 18px;
-    max-width: 80%;
-    margin-bottom: 60px;
-  }
-
-  .buttoncreate {
-    font-size: 18px;
-    padding: 8px 18px;
-  }
-
-  .buttonjoin {
-    margin-left: 40%;
+  .main-title {
+    font-size: 2rem;
   }
   
-  .buttonjoinsecond{
-    font-size: 18px;
-    padding: 8px 40px;
-    margin-left: 50px;
-  }
-
-  .content {
-    flex-direction: row;
-    height: 40vh;
-    padding: 25px;
-  }
-
-  .card {
-    width: 45%;
-    height: auto;
-  }
-
-  .title2 {
-    font-size: 32px;
-  }
-
-  .foodimagen {
-    width: 100%;
-    max-width: 350px;
-  }
-
-  .foodtext {
-    font-size: 18px;
-    margin-left: 50px;
-  }
-
-  .recipe-categories ul li {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  .plans-container {
-    flex-direction: row;
-    padding: 80px;
-  }
-
-  .plan {
-    width: 30%;
-  }
-
-  .basic-plan,
-  .professional-plan,
-  .master-plan {
-    width: 30%;
-  }
-}
-
-/* Pantallas grandes (escritorios) */
-@media (min-width: 1024px) {
-  .title {
-    font-size: 90px;
-    margin-top: 1px;
-  }
-
-  .text1 {
-    font-size: 18px;
-    max-width: 600px;
-    margin-top: 30px;
-    margin-bottom: 40px;
-  }
-
-  .buttoncreate {
-    font-size: 20px;
-    padding: 10px 20px;
-  }
-  .titlecard {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-  .buttonjoin {
-    margin-left: 45%;
+  .plans-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
-  .buttonjoinsecond{
-    font-size: 18px;
-    padding: 8px 135px;
-    margin-left: 60px;
+  .plan-card.featured {
+    transform: none;
   }
-
-  .content {
-    height: 35vh;
-    flex-direction: row;
-    margin-top: 130px;
+  
+  .period-toggle {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
   }
-
-  .card {
-    width: 45%;
-    height: 45vh;
-  }
-
-  .title2 {
-    font-size: 36px;
-  }
-
-  .image-container {
-    gap: 50px;
-  }
-
-  .foodimagen {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .foodtext {
-    font-size: 18px;
-    margin-left: 60px;
-  }
-
-  .recipe-categories ul li {
-    font-size: 24px;
-  }
-
-  .plans-container {
-    flex-direction: row;
-    padding: 100px;
-  }
-
-  .plan {
-    width: 28%;
-  }
-
-  .basic-plan,
-  .professional-plan,
-  .master-plan {
-    width: 28%;
+  
+  .discount-badge {
+    margin-top: 0.25rem;
   }
 }
 </style>

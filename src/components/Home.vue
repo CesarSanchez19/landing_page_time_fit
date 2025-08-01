@@ -231,25 +231,25 @@
         </section>
 
         <!-- * Section: Transform your gym experience with innovative  -->
-        <section class="backgrd-final-content-main">
-            <img src="../assets/img-home/background-fit.svg" alt="">
+        <!-- <section class="backgrd-final-content-main">
+            <img src="../assets/img-home/background-fit.svg" alt=""> -->
 
-            <div class="text-bttn-final-content">
-                <h2>Transform your gym experience with innovative</h2>
-                <p>Join Time Fit and take your training to the next level.</p>
+            <!-- <div class="text-bttn-final-content"> -->
+                <!-- <h2>Transform your gym experience with innovative</h2>
+                <p>Join Time Fit and take your training to the next level.</p> -->
                 
                 <!-- Button for redirection to "Sign up" to Time Fit / Admin-->
-                <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">
+                <!-- <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">
                     <button class="bttn-red-more-3 bttn-final-content">Join now</button>
-                </a>
+                </a> -->
 
                 <!-- There is a conection to "Log in" section of landing -->
                 <!-- <router-link to="/Login">
                     <button class="bttn-red-more-3 bttn-final-content">Join now</button>
                 </router-link> -->
-            </div>
-
-        </section>
+            <!-- </div> -->
+<!-- 
+        </section> -->
         
     </main>
     </section>

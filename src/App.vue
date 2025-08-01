@@ -56,24 +56,19 @@
                     <font-awesome-icon :icon="['fas', 'envelope']" /> Contact
                   </router-link>
                 </li>
-                <!-- Elemento de navegación: Sign In -->
+                <!-- Elemento de navegación: Sign In
                 <li class="nav-item">
-                  <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" class="nav-link" target="_blank" rel="noopener">
+                  <router-link to="/SignIn" class="nav-link" @click="closeMenu">
                     <font-awesome-icon :icon="['fas', 'user-plus']" /> Sign up
-                  </a>
-                  <!-- <router-link to="/SignIn" class="nav-link" @click="closeMenu">
-                    <font-awesome-icon :icon="['fas', 'user-plus']" /> Sign up
-                  </router-link> -->
+                  </router-link>
                 </li>
-                <!-- Elemento de navegación: Login -->
+                Elemento de navegación: Login
                 <li class="nav-item">
-                  <a href="https://time-fit-web-app-flax.vercel.app/#/login" class="nav-link" target="_blank" rel="noopener">
+
+                  <router-link to="/Login" class="nav-link" @click="closeMenu">
                     <font-awesome-icon :icon="['fas', 'right-to-bracket']" /> Log in
-                  </a>
-                  <!-- <router-link to="/Login" class="nav-link" @click="closeMenu">
-                    <font-awesome-icon :icon="['fas', 'right-to-bracket']" /> Log in
-                  </router-link> -->
-                </li>
+                  </router-link>
+                </li> -->
                 <li>
                   <button @click="handleSignOut" v-if="isLoggedIn" class="sign-out"> Sign out</button>
                 </li>
@@ -118,14 +113,14 @@
                 <li>
                   <router-link to="/Features" @click="handleButtonClick('features')">Features</router-link>
                 </li>
-                <li>
-                  <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">Sign up</a>
+                <!-- <li> -->
+                  <!-- <a href="https://time-fit-web-app-flax.vercel.app/#/sign_up" target="_blank" rel="noopener">Sign up</a> -->
                   <!-- <router-link to="/SignIn" @click="handleButtonClick('signin')">Sign up</router-link> -->
-                </li>
-                <li>
-                  <a href="https://time-fit-web-app-flax.vercel.app/#/login" target="_blank" rel="noopener">Log in</a>
+                <!-- </li>
+                <li> -->
+                  <!-- <a href="https://time-fit-web-app-flax.vercel.app/#/login" target="_blank" rel="noopener">Log in</a> -->
                   <!-- <router-link to="/Login" @click="handleButtonClick('login')">Log in</router-link> -->
-                </li>
+                <!-- </li> -->
               </ul>
             </div>
 
