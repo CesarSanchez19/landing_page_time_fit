@@ -209,49 +209,54 @@
         <!-- Professional Plan -->
         <div class="plan-card featured">
           <div class="popular-badge">Most Popular</div>
-          <div class="plan-header">
-            <h3 class="plan-name">PROFESSIONAL PLAN</h3>
-            <p class="plan-description">Ideal for established gyms.</p>
-            <div class="price-section">
-              <div class="price">
-                <span class="currency">$</span>
-                <span class="amount">{{ isAnnual ? '7,200' : '700' }}</span>
-                <span class="period">MXN/{{ isAnnual ? 'annual' : 'month' }}</span>
+            <div class="info-container-most-popular">
+
+              <div class="plan-header">
+                <h3 class="plan-name">PROFESSIONAL PLAN</h3>
+                <p class="plan-description">Ideal for established gyms.</p>
+                <div class="price-section">
+                  <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount">{{ isAnnual ? '7,200' : '700' }}</span>
+                    <span class="period">MXN/{{ isAnnual ? 'annual' : 'month' }}</span>
+                  </div>
+                  <div v-if="isAnnual" class="savings">Save $1,200 MXN</div>
+                </div>
               </div>
-              <div v-if="isAnnual" class="savings">Save $1,200 MXN</div>
+              
+              <div class="features-section">
+                <h4 class="features-title">What's included?</h4>
+                <ul class="features-list">
+                  <li class="feature-item">
+                    <i class="check-icon">✓</i>
+                    Complete Home dashboard with widgets
+                  </li>
+                  <li class="feature-item">
+                    <i class="check-icon">✓</i>
+                    Unlimited clients with complete history
+                  </li>
+                  <li class="feature-item">
+                    <i class="check-icon">✓</i>
+                    Customizable unlimited memberships
+                  </li>
+                  <li class="feature-item">
+                    <i class="check-icon">✓</i>
+                    Staff registration (up to 5)
+                  </li>
+                  <li class="feature-item">
+                    <i class="check-icon">✓</i>
+                    Smart reminder calendar
+                  </li>
+                  <li class="feature-item">
+                    <i class="check-icon">✓</i>
+                    Basic income reports
+                  </li>
+                </ul>
+              </div>
+
             </div>
           </div>
-          
-          <div class="features-section">
-            <h4 class="features-title">What's included?</h4>
-            <ul class="features-list">
-              <li class="feature-item">
-                <i class="check-icon">✓</i>
-                Complete Home dashboard with widgets
-              </li>
-              <li class="feature-item">
-                <i class="check-icon">✓</i>
-                Unlimited clients with complete history
-              </li>
-              <li class="feature-item">
-                <i class="check-icon">✓</i>
-                Customizable unlimited memberships
-              </li>
-              <li class="feature-item">
-                <i class="check-icon">✓</i>
-                Staff registration (up to 5)
-              </li>
-              <li class="feature-item">
-                <i class="check-icon">✓</i>
-                Smart reminder calendar
-              </li>
-              <li class="feature-item">
-                <i class="check-icon">✓</i>
-                Basic income reports
-              </li>
-            </ul>
-          </div>
-        </div>
+
 
         <!-- Master Plan -->
         <div class="plan-card">
@@ -377,7 +382,7 @@ export default {
   display: flex;
   width: 100%;
   color: white;
-  font-size: 80px;
+  font-size: clamp(32px, 8vw, 80px); /* Responsive font size */
   font-family: "Poppins";
   font-weight: 600;
   text-transform: uppercase;
@@ -385,6 +390,7 @@ export default {
   position: relative;
   top: 1px;
   margin: 0 auto;
+  text-align: center; /* Añadido para centrar en móviles */
 }
 
 .text1 {
@@ -411,23 +417,26 @@ export default {
   padding: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch; /* Cambiado de center a stretch */
   gap: 20px;
-  height: 35vh;
+  min-height: 35vh; /* Cambiado de height fijo a min-height */
+  flex-wrap: wrap; /* Añadido para wrapping */
 }
 
 .card {
   display: flex;
   flex-direction: column;
   width: 24%;
+  min-width: 280px; /* Añadido ancho mínimo */
   background: #3b3b3b;
   border-radius: 23px;
   justify-content: center;
   align-items: center;
   height: auto;
   padding: 20px;
-  top: -150px;
+  position: relative; /* Añadido */
   z-index: 1;
+  flex: 1; /* Añadido para distribución flexible */
 }
 
 .icon {
@@ -476,8 +485,9 @@ export default {
 .rectangles {
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  gap: 25px; /* Reducido el gap */
   margin-bottom: 35px;
+  padding: 0 10px; /* Añadido padding lateral */
 }
 
 .image-container {
@@ -486,19 +496,21 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 20px; /* Reducido el gap */
+  flex-wrap: wrap; /* Añadido para wrapping */
 }
 
 .imagen-rec {
   position: relative;
-  width: 250px;
-  height: 600px;
+  width: 200px; /* Reducido el ancho */
+  height: 300px; /* Reducido la altura */
   background: rgba(0, 0, 0, 0.78);
   border-radius: 15px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0; /* Añadido */
 }
 
 .imagenes-rec {
@@ -537,6 +549,7 @@ export default {
   gap: 20px;
   padding: 20px;
   margin-bottom: 40px;
+  flex-wrap: wrap; /* Añadido para wrapping */
 }
 
 .recipe-image {
@@ -570,12 +583,13 @@ export default {
 
 .foodtext {
   color: white;
-  width: 60%;
+  width: 100%; /* Cambiado de 60% a 100% */
   font-size: 18px;
   font-family: "Poppins", sans-serif;
   word-wrap: break-word;
-  margin-left: 60px;
+  margin-left: 0; /* Cambiado de 60px a 0 */
   margin-bottom: 20px;
+  padding: 0 20px; /* Añadido padding */
 }
 
 .recipe-categories {
@@ -768,14 +782,19 @@ export default {
 }
 
 .popular-badge {
-  position: absolute;
+  position: relative;
   top: -10px;
-  right: 20px;
+  /* left: 48%; */
+  right: -50%;
+  width: 12em;
+  /* margin-right: 2em; */
+  /* margin-top: 1em; */
+  text-align: center;
   background: #272829;
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 0.79rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -946,6 +965,144 @@ export default {
   
   .discount-badge {
     margin-top: 0.25rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .card {
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .image-container {
+    gap: 15px;
+  }
+  
+  .imagen-rec {
+    width: 180px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .body {
+    height: auto;
+    min-height: 100vh;
+    padding: 10px;
+  }
+  
+  .title {
+    font-size: clamp(24px, 6vw, 48px);
+    line-height: 1.2;
+  }
+  
+  .text1 {
+    font-size: 16px;
+    margin: 20px 10px 40px 10px;
+    text-align: center;
+  }
+  
+  .content {
+    height: auto;
+    padding: 15px;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 15px;
+  }
+  
+  .title2 {
+    font-size: 28px;
+    padding: 0 10px;
+  }
+  
+  .image-container {
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .imagen-rec {
+    width: 150px;
+    height: 200px;
+  }
+  
+  .text-imagen {
+    font-size: 1.2rem;
+  }
+  
+  .textrec {
+    width: 95%;
+    margin-left: 2.5%;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .recipe-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .recipe-image,
+  .recipe-description,
+  .recipe-categories {
+    width: 100%;
+  }
+  
+  .foodtext {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .title3 {
+    font-size: 28px;
+    text-align: center;
+    margin-left: 0;
+  }
+  
+  .recipe-categories li {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .title4 {
+    font-size: 36px;
+  }
+  
+  .textplan {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imagen-rec {
+    width: 120px;
+    height: 160px;
+  }
+  
+  .text-imagen {
+    font-size: 1rem;
+  }
+  
+  .recipe-categories img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+  
+  .recipe-categories li {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>
