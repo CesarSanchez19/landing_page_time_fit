@@ -15,7 +15,7 @@
 
     <div class="content">
       <div class="card">
-        <img class="icon" :src="require('@/assets/Customer_Support.svg')" alt="Customer Support" />
+        <img class="icon" :src="customerSupportIcon" alt="Customer Support" />
         <div class="titlecard">Dedicated Customer Support</div>
         <div class="textcard">
           Our support team is available to assist you every step of the way,
@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="card">
-        <img class="icon" :src="require('@/assets/bar-chart-line-fill.svg')" alt="Grafica" />
+        <img class="icon" :src="barChartIcon" alt="Grafica" />
         <div class="titlecard">Flexible Scalability</div>
         <div class="textcard">
           Time Fit grows with you. As your gym expands, you can easily upgrade
@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="card">
-        <img class="icon" :src="require('@/assets/sync.svg')" alt="Update" />
+        <img class="icon" :src="syncIcon" alt="Update" />
         <div class="titlecard">Constant Updates</div>
         <div class="textcard">
           At Time Fit, we continuously work on improving our platform with new
@@ -52,45 +52,45 @@
       <div class="rectangles">
         <div class="image-container">
           <div class="imagen-rec">
-            <img class="imagenes-rec" :src="require('@/assets/squat.png')" alt="squat" />
+            <img class="imagenes-rec" :src="squatImage" alt="squat" />
             <div class="text-imagen">Squats</div>
           </div>
           <div class="imagen-rec">
-            <img class="imagenes-rec" :src="require('@/assets/push.jpg')" alt="push up" />
+            <img class="imagenes-rec" :src="pushImage" alt="push up" />
             <div class="text-imagen">Push-Ups</div>
           </div>
           <div class="imagen-rec">
-            <img class="imagenes-rec" :src="require('@/assets/pull_up.png')" alt="pull up" />
+            <img class="imagenes-rec" :src="pullUpImage" alt="pull up" />
             <div class="text-imagen">Pull-Ups</div>
           </div>
           <div class="imagen-rec">
-            <img class="imagenes-rec" :src="require('@/assets/burpees.png')" alt="burpees" />
+            <img class="imagenes-rec" :src="burpeesImage" alt="burpees" />
             <div class="text-imagen">Burpees</div>
           </div>
           <div class="imagen-rec">
-            <img class="imagenes-rec" :src="require('@/assets/plank.png')" alt="plank" />
+            <img class="imagenes-rec" :src="plankImage" alt="plank" />
             <div class="text-imagen">Plank</div>
           </div>
         </div>
         <div class="image-container">
           <div class="imagen-rec">
-            <img class="imagenes-rec" :src="require('@/assets/lunges.png')" alt="lunges" />
+            <img class="imagenes-rec" :src="lungesImage" alt="lunges" />
             <div class="text-imagen">Lunges</div>
           </div>
           <div class="imagen-rec">
-            <img class="imagenes-rec" :src="require('@/assets/deadlift.png')" alt="deadlift" />
+            <img class="imagenes-rec" :src="deadliftImage" alt="deadlift" />
             <div class="text-imagen">Deadlift</div>
           </div>
           <div class="imagen-rec">
-            <img class="imagenes-rec" :src="require('@/assets/bicep.png')" alt="bicep curl" />
+            <img class="imagenes-rec" :src="bicepImage" alt="bicep curl" />
             <div class="text-imagen">Bicep Curls</div>
           </div>
           <div class="imagen-rec">
-            <img class="imagenes-rec" :src="require('@/assets/barbell.png')" alt="barbell bicep curl" />
+            <img class="imagenes-rec" :src="barbellImage" alt="barbell bicep curl" />
             <div class="text-imagen">Barbell Bicep Curl</div>
           </div>
           <div class="imagen-rec">
-            <img class="imagenes-rec" :src="require('@/assets/leg.png')" alt="leg raise" />
+            <img class="imagenes-rec" :src="legImage" alt="leg raise" />
             <div class="text-imagen">Leg Raise</div>
           </div>
         </div>
@@ -109,7 +109,7 @@
     <div class="recipe-section">
       <!-- Imagen -->
       <div class="recipe-image">
-        <img class="foodimagen" :src="require('@/assets/food.png')" />
+        <img class="foodimagen" :src="foodImage" />
       </div>
 
       <!-- Texto descriptivo -->
@@ -128,15 +128,15 @@
       <div class="recipe-categories">
         <ul>
           <li>
-            <img :src="require('@/assets/breakfast.png')" alt="Breakfast" />Breakfast
+            <img :src="breakfastImage" alt="Breakfast" />Breakfast
           </li>
-          <li><img :src="require('@/assets/lunch.png')" alt="Lunch" />Lunch</li>
+          <li><img :src="lunchImage" alt="Lunch" />Lunch</li>
           <li>
-            <img :src="require('@/assets/dinner.png')" alt="Dinner" />Dinner
+            <img :src="dinnerImage" alt="Dinner" />Dinner
           </li>
-          <li><img :src="require('@/assets/snack.png')" alt="Snack" />Snack</li>
+          <li><img :src="snackImage" alt="Snack" />Snack</li>
           <li>
-            <img :src="require('@/assets/smoothies.png')" alt="Smoothies" />Smoothies
+            <img :src="smoothiesImage" alt="Smoothies" />Smoothies
           </li>
         </ul>
       </div>
@@ -315,6 +315,27 @@
 <script>
 import { ref } from 'vue'
 
+// Importaciones estáticas de todas las imágenes
+import customerSupportIcon from '@/assets/Customer_Support.svg'
+import barChartIcon from '@/assets/bar-chart-line-fill.svg'
+import syncIcon from '@/assets/sync.svg'
+import squatImage from '@/assets/squat.png'
+import pushImage from '@/assets/push.jpg'
+import pullUpImage from '@/assets/pull_up.png'
+import burpeesImage from '@/assets/burpees.png'
+import plankImage from '@/assets/plank.png'
+import lungesImage from '@/assets/lunges.png'
+import deadliftImage from '@/assets/deadlift.png'
+import bicepImage from '@/assets/bicep.png'
+import barbellImage from '@/assets/barbell.png'
+import legImage from '@/assets/leg.png'
+import foodImage from '@/assets/food.png'
+import breakfastImage from '@/assets/breakfast.png'
+import lunchImage from '@/assets/lunch.png'
+import dinnerImage from '@/assets/dinner.png'
+import snackImage from '@/assets/snack.png'
+import smoothiesImage from '@/assets/smoothies.png'
+
 export default {
   name: 'SubscriptionPlans',
   setup() {
@@ -326,7 +347,27 @@ export default {
 
     return {
       isAnnual,
-      togglePeriod
+      togglePeriod,
+      // Exportar todas las imágenes para usar en el template
+      customerSupportIcon,
+      barChartIcon,
+      syncIcon,
+      squatImage,
+      pushImage,
+      pullUpImage,
+      burpeesImage,
+      plankImage,
+      lungesImage,
+      deadliftImage,
+      bicepImage,
+      barbellImage,
+      legImage,
+      foodImage,
+      breakfastImage,
+      lunchImage,
+      dinnerImage,
+      snackImage,
+      smoothiesImage
     }
   }
 }
@@ -1105,4 +1146,5 @@ export default {
     justify-content: center;
   }
 }
+
 </style>

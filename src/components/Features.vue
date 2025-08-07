@@ -11,7 +11,7 @@
       </div>
       <button class="button" onclick="location.href='#firstSection'">
         Learn More
-        <img :src="require('@/assets/arrow-down.svg')" alt="icon" class="icon" />
+        <img :src="arrowDownIcon" alt="icon" class="icon" />
       </button>
     </div>
 
@@ -30,7 +30,7 @@
         </div>
 
         <div class="image-section">
-          <img :src="require('@/assets/firts.png')" alt="Time Fit Applications" class="img1" />
+          <img :src="firtsImage" alt="Time Fit Applications" class="img1" />
         </div>
       </div>
 
@@ -58,7 +58,7 @@
           </div>
 
           <div class="image-section1">
-            <img :src="require('@/assets/second.png')" alt="Time Fit Applications" class="img2" />
+            <img :src="secondImage" alt="Time Fit Applications" class="img2" />
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@
       <div class="container2">
         <div class="content2">
           <div class="image-section2">
-            <img :src="require('@/assets/third.png')" alt="Time Fit Applications" class="img3" />
+            <img :src="thirdImage" alt="Time Fit Applications" class="img3" />
           </div>
           <div class="text-section2">
             <h2>Customized Workouts for Your Goals</h2>
@@ -107,7 +107,7 @@
           </div>
 
           <div class="image-section1">
-            <img :src="require('@/assets/forth.png')" alt="Time Fit Applications" class="img2" />
+            <img :src="forthImage" alt="Time Fit Applications" class="img2" />
           </div>
         </div>
       </div>
@@ -117,7 +117,7 @@
       <div class="container2">
         <div class="content2">
           <div class="image-section2">
-            <img :src="require('@/assets/five.png')" alt="Time Fit Applications" class="img3" />
+            <img :src="fiveImage" alt="Time Fit Applications" class="img3" />
           </div>
           <div class="text-section2">
             <h2>Connect and Share with the Community</h2>
@@ -155,7 +155,7 @@
           </div>
 
           <div class="image-section1">
-            <img :src="require('@/assets/six.png')" alt="Time Fit Applications" class="img2" />
+            <img :src="sixImage" alt="Time Fit Applications" class="img2" />
           </div>
         </div>
       </div>
@@ -189,7 +189,7 @@
           </div>
 
           <div class="image-section1">
-            <img :src="require('@/assets/wepapp/webappimg1.png')" alt="Time Fit Applications" class="img22" />
+            <img :src="webAppImgUno" alt="Time Fit Applications" class="img22" />
           </div>
         </div>
       </div>
@@ -199,7 +199,7 @@
       <div class="container2">
         <div class="content2">
           <div class="image-section2">
-            <img :src="require('@/assets/wepapp/webappimg2.png')" alt="Time Fit Applications" class="img33" />
+            <img :src="webAppImgDos" alt="Time Fit Applications" class="img33" />
           </div>
           <div class="text-section2">
             <h2>Users at Your Fingertips</h2>
@@ -234,7 +234,7 @@
           </div>
 
           <div class="image-section1">
-            <img :src="require('@/assets/wepapp/webappimg3.png')" alt="Time Fit Applications" class="img22" />
+            <img :src="webAppImgTres" alt="Time Fit Applications" class="img22" />
           </div>
         </div>
       </div>
@@ -244,7 +244,7 @@
       <div class="container2">
         <div class="content2">
           <div class="image-section2">
-            <img :src="require('@/assets/wepapp/webappimg4.png')" alt="Time Fit Applications" class="img33" />
+            <img :src="webAppImgCuatro" alt="Time Fit Applications" class="img33" />
           </div>
           <div class="text-section2">
             <h2>Efficient Management of Collaborators</h2>
@@ -278,7 +278,7 @@
           </div>
 
           <div class="image-section1">
-            <img :src="require('@/assets/wepapp/webappimg5.png')" alt="Time Fit Applications" class="img22" />
+            <img :src="webAppImgCinco" alt="Time Fit Applications" class="img22" />
           </div>
         </div>
       </div>
@@ -288,7 +288,7 @@
       <div class="container2">
         <div class="content2">
           <div class="image-section2">
-            <img :src="require('@/assets/wepapp/webappimg6.png')" alt="Time Fit Applications" class="img33" />
+            <img :src="webAppImgSeis" alt="Time Fit Applications" class="img33" />
           </div>
           <div class="text-section2">
             <h2>Smart Product Inventory Management</h2>
@@ -324,7 +324,7 @@
           </div>
 
           <div class="image-section1">
-            <img :src="require('@/assets/wepapp/webappimg7.png')" alt="Time Fit Applications" class="img22" />
+            <img :src="webAppImgSiete" alt="Time Fit Applications" class="img22" />
           </div>
         </div>
       </div>
@@ -334,7 +334,7 @@
       <div class="container2">
         <div class="content2">
           <div class="image-section2">
-            <img :src="require('@/assets/wepapp/webappimg8.png')" alt="Time Fit Applications" class="img33" />
+            <img :src="webAppImgOcho" alt="Time Fit Applications" class="img33" />
           </div>
           <div class="text-section2">
             <h2>Stay Organized, Focused, and In Control with Ease!</h2>
@@ -350,6 +350,48 @@
     </div>
   </section>
 </template>
+
+<script>
+// Importaciones estáticas de todas las imágenes
+import arrowDownIcon from '@/assets/arrow-down.svg';
+import firtsImage from '@/assets/firts.png';
+import secondImage from '@/assets/second.png';
+import thirdImage from '@/assets/third.png';
+import forthImage from '@/assets/forth.png';
+import fiveImage from '@/assets/five.png';
+import sixImage from '@/assets/six.png';
+import webAppImgUno from '@/assets/wepapp/webappimg1.png';
+import webAppImgDos from '@/assets/wepapp/webappimg2.png';
+import webAppImgTres from '@/assets/wepapp/webappimg3.png';
+import webAppImgCuatro from '@/assets/wepapp/webappimg4.png';
+import webAppImgCinco from '@/assets/wepapp/webappimg5.png';
+import webAppImgSeis from '@/assets/wepapp/webappimg6.png';
+import webAppImgSiete from '@/assets/wepapp/webappimg7.png';
+import webAppImgOcho from '@/assets/wepapp/webappimg8.png';
+
+export default {
+  setup() {
+    return {
+      arrowDownIcon,
+      firtsImage,
+      secondImage,
+      thirdImage,
+      forthImage,
+      fiveImage,
+      sixImage,
+      webAppImgUno,
+      webAppImgDos,
+      webAppImgTres,
+      webAppImgCuatro,
+      webAppImgCinco,
+      webAppImgSeis,
+      webAppImgSiete,
+      webAppImgOcho
+    }
+  }
+}
+
+</script>
 
 <style scoped>
 :root {

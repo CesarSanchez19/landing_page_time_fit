@@ -1,7 +1,8 @@
-.DS_Store
-node_modules
-/dist
+# Vite
+dist/
 
+.DS_Store
+node_modules/
 
 # local env files
 .env.local
